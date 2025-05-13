@@ -1,11 +1,31 @@
 #include <iostream>
 #include <array>
+#include <jucator.h>
+#include<jucator.cpp>
+#include <jucatorUtilizator.h>
+#include <jucatorUtilizator.cpp>
+#include <fstream>
 
 int main() {
-    std::cout << "Hello, world!\n";
-    std::array<int, 100> v{};
-    int nr;
-    std::cout << "Introduceți nr: ";
+    Jucator jucator1("Ruxi", 1500);
+    jucator1.afisareJucator();
+    jucatorUtilizator jucatorul("Ruxi", 1500);
+    jucatorul.actualizare();
+    jucatorul.afisareJucator();
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
     /////////////////////////////////////////////////////////////////////////
     /// Observație: dacă aveți nevoie să citiți date de intrare de la tastatură,
     /// dați exemple de date de intrare folosind fișierul tastatura.txt
@@ -26,17 +46,9 @@ int main() {
     /// program care merg (și să le evitați pe cele care nu merg).
     ///
     /////////////////////////////////////////////////////////////////////////
-    std::cin >> nr;
+
     /////////////////////////////////////////////////////////////////////////
-    for(int i = 0; i < nr; ++i) {
-        std::cout << "v[" << i << "] = ";
-        std::cin >> v[i];
-    }
-    std::cout << "\n\n";
-    std::cout << "Am citit de la tastatură " << nr << " elemente:\n";
-    for(int i = 0; i < nr; ++i) {
-        std::cout << "- " << v[i] << "\n";
-    }
+
     ///////////////////////////////////////////////////////////////////////////
     /// Pentru date citite din fișier, NU folosiți tastatura.txt. Creați-vă voi
     /// alt fișier propriu cu ce alt nume doriți.
@@ -44,5 +56,3 @@ int main() {
     /// std::ifstream fis("date.txt");
     /// for(int i = 0; i < nr2; ++i)
     ///     fis >> v2[i];
-    return 0;
-}
