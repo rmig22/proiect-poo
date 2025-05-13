@@ -1,9 +1,13 @@
 #include <iostream>
 #include <array>
 #include <jucator.h>
-#include<jucator.cpp>
+#include <jucator.cpp>
 #include <jucatorUtilizator.h>
 #include <jucatorUtilizator.cpp>
+#include <intrebare.h>
+#include <intrebare.cpp>
+#include <chestionar.h>
+#include <chestionar.cpp>
 #include <fstream>
 
 int main() {
@@ -12,6 +16,9 @@ int main() {
     jucatorUtilizator jucatorul("Ruxi", 1500);
     jucatorul.actualizare();
     jucatorul.afisareJucator();
+
+    Chestionar chestionarul1();
+    chestionarul1().afiseazaIntrebari();
 
     return 0;
 }

@@ -10,13 +10,19 @@
 
 class Intrebare{
   private:
-    std::string text;
+    std::string intr;
     std::string raspuns;
-    std::vector <std::string> raspunsuri;
+    std::vector <std::string> variante;
 
   public:
-    Intrebare (const std::string& text, const std::string& raspuns, const:: std::string& raspunsuri);
+    Intrebare(const std::string& intr,
+              const std::string& raspuns,
+              const std::vector<std::string>& variante)
+        : intr(intr), raspuns(raspuns), variante(variante) {};
 
+    std::string getIntr () const;
+    std::string getRaspuns () const;
+    std::vector <std::string> getRaspunsuri () const;
 
 };
 
