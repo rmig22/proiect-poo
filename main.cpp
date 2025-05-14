@@ -1,24 +1,17 @@
 #include <iostream>
 #include <array>
-#include <jucator.h>
-#include <jucator.cpp>
-#include <jucatorUtilizator.h>
-#include <jucatorUtilizator.cpp>
-#include <intrebare.h>
-#include <intrebare.cpp>
-#include <chestionar.h>
-#include <chestionar.cpp>
+#include "src/jucator.cpp"
+#include "src/jucatorUtilizator.cpp"
+#include "src/chestionar.cpp"
 #include <fstream>
 
 int main() {
-    Jucator jucator1("Ruxi", 1500);
-    jucator1.afisareJucator();
-    jucatorUtilizator jucatorul("Ruxi", 1500);
-    jucatorul.actualizare();
-    jucatorul.afisareJucator();
-
-    Chestionar chestionarul1();
-    chestionarul1().afiseazaIntrebari();
+    //Jucator jucator1( 1500);
+    // jucator1.setNume("Ruxi");
+    // jucator1.afisareJucator();
+    jucatorUtilizator jucatorul;
+    // jucatorul.actualizare();
+    // jucatorul.afisareJucator();
 
     return 0;
 }

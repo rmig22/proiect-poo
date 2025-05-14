@@ -4,27 +4,31 @@
 
 #ifndef JUCATOR_H
 #define JUCATOR_H
+#include <chestionar.h>
 #include <string>
 #include <iostream>
 
-class Jucator {
+class Jucator{
 protected:
-    std:: string nume;
-    int elo; //elo este ratingul jucatorului
+    std::string nume;
+    int elo = 1000;
     // void afisareJucator(){
     //   std::cout<<"nume:" <<nume<< " "<< "elo: "<< elo;
     //   }
 
 public:
 
-    std::string getNume();
-    int getElo();
-    void setNume(std::string& nume);
+    [[nodiscard]] std::string getNume() const;
+    [[nodiscard]] int getElo() const;
+    [[nodiscard]] Chestionar getChestionar() const;
+    void setNume(std::string nume);
     void setElo(int elo);
+    void setChestionar(Chestionar chestionar);
 
-    Jucator(const std::string& nume, int elo);
     virtual void afisareJucator();
+    virtual ~Jucator() = default;
     //void static intdinfisier(std::string& fisier);
 };
 
 #endif //JUCATOR_H
+

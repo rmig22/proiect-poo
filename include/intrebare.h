@@ -3,6 +3,7 @@
 //
 #include <iostream>
 #include <string.h>
+#include <utility>
 #include <vector>
 
 #ifndef INTREBARE_H
@@ -11,19 +12,20 @@
 class Intrebare{
   private:
     std::string intr;
-    std::string raspuns;
+    char raspuns;
     std::vector <std::string> variante;
 
   public:
-    Intrebare(const std::string& intr,
-              const std::string& raspuns,
+    Intrebare(std::string  intr,
+              char  raspuns,
               const std::vector<std::string>& variante)
-        : intr(intr), raspuns(raspuns), variante(variante) {};
+        : intr(std::move(intr)),raspuns (raspuns), variante(variante) {};
 
-    std::string getIntr () const;
-    std::string getRaspuns () const;
-    std::vector <std::string> getRaspunsuri () const;
+    [[nodiscard]] std::string getIntr () const;
+    [[nodiscard]] char getRaspuns () const;
+    [[nodiscard]] std::vector <std::string> getRaspunsuri () const;
 
+    std::ostream& operator << (std::ostream&);
 };
 
-#endif //INTREBARE_H
+#endif //INTREBARE_H;

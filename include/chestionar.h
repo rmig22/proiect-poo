@@ -1,8 +1,10 @@
 //
 // Created by RImoc on 5/13/2025.
 //
+#pragma once
+
 #include <vector>
-#include <Intrebare.h>
+#include "intrebare.h"
 #ifndef CHESTIONAR_H
 #define CHESTIONAR_H
 
@@ -11,10 +13,13 @@ class Chestionar {
 
  private:
    int punctaj = 0;
-   std::vector <Intrebare> intrebarile_totale;
+    std::vector <Intrebare> intrebarile_totale = {};
+    std::vector <Intrebare> set_intrebari[5];
 
  public:
-   Chestionar();
+    Chestionar();
+    ~Chestionar() = default;
+    int getPunctaj() const;
    void afiseazaIntrebari();
 };
 

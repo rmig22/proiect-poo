@@ -4,17 +4,25 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <intrebare.h>
-using namespace std;
+#include "../include/intrebare.h"
 
 std::string Intrebare:: getIntr () const {
-  return (intr);
+  return intr;
 }
 
-std::string Intrebare::getRaspuns () const {
-  return (raspuns);
+char Intrebare::getRaspuns () const {
+  return raspuns;
 }
 
 std::vector<std::string> Intrebare::getRaspunsuri() const {
-  return (variante);
+  return variante;
+}
+
+std::ostream& operator << (std::ostream& c, const Intrebare &i) {
+  c<<i.getIntr()<< std::endl;//<< i.getRaspunsuri() << std::endl << "Raspuns: ";
+  for (const auto& x : i.getRaspunsuri()) {
+    c<<x<<std::endl;
+  }
+  c << "Raspuns: ";
+  return c;
 }

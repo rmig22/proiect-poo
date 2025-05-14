@@ -3,12 +3,21 @@
 //
 #include <iostream>
 #include <string.h>
-#include "jucatorUtilizator.h"
-#include "jucator.h"
+#include "../include/jucatorUtilizator.h"
+#include "../include/jucator.h"
+#include <cmath>
 using namespace std;
 
 
-jucatorUtilizator:: jucatorUtilizator(const std::string&nume, int elo) : Jucator(nume, elo) {};
+jucatorUtilizator::jucatorUtilizator() {
+  std::cout<<"Numele jucatorului este: ";
+  std::string nume1;
+  std::cin>>nume1;
+  setNume(nume1);
+  std::cout<< "Hello, "<< nume << "!" << std::endl;
+  Chestionar chestionarul;
+  std::cout << "Punctaj: " << chestionarul.getPunctaj() << std::endl;
+};
 void jucatorUtilizator:: actualizare(){
     int newElo = getElo();
     if (categorie == "I"){
