@@ -17,15 +17,19 @@ class Intrebare{
 
   public:
     Intrebare(std::string  intr,
-              char  raspuns,
+              char raspuns,
               const std::vector<std::string>& variante)
         : intr(std::move(intr)),raspuns (raspuns), variante(variante) {};
 
-    [[nodiscard]] std::string getIntr () const;
-    [[nodiscard]] char getRaspuns () const;
-    [[nodiscard]] std::vector <std::string> getRaspunsuri () const;
+  std::string getIntr () const;
 
-    std::ostream& operator << (std::ostream&);
+    char getRaspuns();
+    char *getRaspuns() const;
+    std::vector <std::string> getRaspunsuri () const;
+    void setRaspuns(char *c);
+
+    Intrebare& operator=(const Intrebare& obj); //overloading =
+    std::ostream& operator << (std::ostream&); //overloading <<
 };
 
 #endif //INTREBARE_H;

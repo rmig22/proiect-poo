@@ -30,6 +30,7 @@ Chestionar::Chestionar() {
     // }
     for (int i=0; i<=5; i++) {
         set_intrebari[i] = intrebarile_totale[i];
+        //set_intrebari[i].push_back(intrebarile_totale[i]);
         std::cout<<"Da";
     }
 
