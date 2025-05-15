@@ -4,7 +4,7 @@
 
 #ifndef JUCATOR_H
 #define JUCATOR_H
-#include <chestionar.h>
+#include "../src/chestionar.cpp"
 #include <string>
 #include <iostream>
 

@@ -23,15 +23,15 @@ void Intrebare::setRaspuns(char *c) {
   this->raspuns = c[0];
 }
 
-Intrebare& Intrebare::operator=(const Intrebare& obj) {
-    this->getIntr().replace(this->getIntr().begin(), this->getIntr().end(), obj.getIntr());
-    this->setRaspuns(obj.getRaspuns());
-
-    for (int i = 0; i < 5; i++) {
-      this->getRaspunsuri()[i].replace(this->getRaspunsuri()[i].begin(), this->getRaspunsuri()[i].end(), obj.getRaspunsuri()[i]);
-    }
-  return *this;
-}
+// Intrebare& Intrebare::operator=(const Intrebare& obj) {
+//     this->getIntr().replace(this->getIntr().begin(), this->getIntr().end(), obj.getIntr());
+//     this->setRaspuns(obj.getRaspuns());
+//
+//     for (int i = 0; i < 5; i++) {
+//       this->getRaspunsuri()[i].replace(this->getRaspunsuri()[i].begin(), this->getRaspunsuri()[i].end(), obj.getRaspunsuri()[i]);
+//     }
+//   return *this;
+// }
 
 std::ostream& operator << (std::ostream& c, const Intrebare &i) {
   c<<i.getIntr()<< std::endl;//<< i.getRaspunsuri() << std::endl << "Raspuns: ";

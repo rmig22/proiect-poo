@@ -1,6 +1,5 @@
 #include <iostream>
 #include <array>
-#include "src/jucator.cpp"
 #include "src/jucatorUtilizator.cpp"
 #include "src/chestionar.cpp"
 #include <fstream>

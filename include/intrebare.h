@@ -23,13 +23,14 @@ class Intrebare{
 
   std::string getIntr () const;
 
-    char getRaspuns();
-    char *getRaspuns() const;
-    std::vector <std::string> getRaspunsuri () const;
-    void setRaspuns(char *c);
+  char getRaspuns();
+  std::vector <std::string> getRaspunsuri () const;
+  void setRaspuns(char *c);
 
-    Intrebare& operator=(const Intrebare& obj); //overloading =
-    std::ostream& operator << (std::ostream&); //overloading <<
+  // Intrebare& operator=(const Intrebare& obj); //overloading =
+  std::ostream& operator << (std::ostream&); //overloading <<
+
+
 };
 
 #endif //INTREBARE_H;

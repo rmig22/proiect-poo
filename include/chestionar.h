@@ -4,17 +4,18 @@
 #pragma once
 
 #include <vector>
-#include "intrebare.h"
+#include "../src/intrebare.cpp"//
 #ifndef CHESTIONAR_H
 #define CHESTIONAR_H
 
 
 class Chestionar {
 
- private:
+    friend class jucatorUtilizator;
+ protected:
    int punctaj = 0;
     std::vector <Intrebare> intrebarile_totale = {};
-    std::vector <Intrebare> set_intrebari[5];
+    std::vector <Intrebare> set_intrebari = {};
 
  public:
     Chestionar();
