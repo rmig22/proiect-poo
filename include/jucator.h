@@ -12,18 +12,21 @@ class Jucator{
 protected:
     std::string nume;
     int elo = 1000;
+    std::string categorie;
     // void afisareJucator(){
     //   std::cout<<"nume:" <<nume<< " "<< "elo: "<< elo;
     //   }
 
 public:
 
-    [[nodiscard]] std::string getNume() const;
-    [[nodiscard]] int getElo() const;
-    [[nodiscard]] Chestionar getChestionar() const;
+    std::string getNume() const;
+    int getElo() const;
+    Chestionar getChestionar() const;
     void setNume(std::string nume);
     void setElo(int elo);
     void setChestionar(Chestionar chestionar);
+
+    virtual void setCategorie(std::string cat);
 
     virtual void afisareJucator();
     virtual ~Jucator() = default;

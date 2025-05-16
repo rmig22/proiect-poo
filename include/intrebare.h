@@ -19,11 +19,11 @@ class Intrebare{
     Intrebare(std::string  intr,
               char raspuns,
               const std::vector<std::string>& variante)
-        : intr(std::move(intr)),raspuns (raspuns), variante(variante) {};
+        : intr(std::string (intr)),raspuns (raspuns), variante(variante) {};
 
   std::string getIntr () const;
 
-  char getRaspuns();
+  char getRaspuns() const;
   std::vector <std::string> getRaspunsuri () const;
   void setRaspuns(char *c);
 

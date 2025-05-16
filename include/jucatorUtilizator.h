@@ -2,7 +2,7 @@
 // Created by RImoc on 5/13/2025.
 //
 #include <string>
-#include "jucator.h"
+#include "../src/jucator.cpp"
 #include <iostream>
 #include <math.h>
 #ifndef JUCATORUTILIZATOR_H
@@ -11,8 +11,6 @@
 
 
 class jucatorUtilizator : public Jucator {
-  protected:
-    std::string categorie = "maestru";
 
   public:
     jucatorUtilizator();

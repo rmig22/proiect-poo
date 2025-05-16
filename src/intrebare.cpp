@@ -11,7 +11,7 @@ std::string Intrebare:: getIntr () const {
   return intr;
 }
 
-char Intrebare::getRaspuns() {
+char Intrebare::getRaspuns() const {
   return raspuns;
 }
 

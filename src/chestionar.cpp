@@ -6,11 +6,8 @@
 #include <vector>
 #include <cstring>
 #include <algorithm>
-#include <ctime>
 #include <cstdlib>
 #include <random>
-#include <bits/stdc++.h>
-
 Chestionar::Chestionar() {
     this->intrebarile_totale = {
         Intrebare("1. What happens when a pawn reaches the other side of the board?", 'b', {"a). It explodes", "b). It turns into a queen","c). It retires", "d). It throws a party"}),
@@ -48,7 +45,7 @@ Chestionar::Chestionar() {
     this->punctaj = P;
 };
 
-void Chestionar::afiseazaIntrebari() {
+void Chestionar::afiseazaIntrebari() const {
     for (const auto& i : set_intrebari) {
         std::cout << i.getIntr() << std::endl;
 

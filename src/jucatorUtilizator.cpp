@@ -9,6 +9,7 @@ using namespace std;
 
 
 jucatorUtilizator::jucatorUtilizator() {
+  this->categorie = "IV";
   std::cout<<"Numele jucatorului este: ";
   std::string nume1;
   std::cin>>nume1;

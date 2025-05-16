@@ -11,7 +11,7 @@
 
 class Chestionar {
 
-    friend class jucatorUtilizator;
+    // friend class jucator;
  protected:
    int punctaj = 0;
     std::vector <Intrebare> intrebarile_totale = {};
@@ -19,9 +19,9 @@ class Chestionar {
 
  public:
     Chestionar();
-    ~Chestionar() = default;
     int getPunctaj() const;
-   void afiseazaIntrebari();
+   void afiseazaIntrebari() const;
+    ~Chestionar() = default;
 };
 
 

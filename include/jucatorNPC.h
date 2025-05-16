@@ -1,0 +1,16 @@
+//
+// Created by RImoc on 5/15/2025.
+//
+#include "Jucator.h"
+#ifndef JUCATORNPC_H
+#define JUCATORNPC_H
+
+#endif //JUCATORNPC_H
+class jucatorNPC : public Jucator{
+
+  public:
+  jucatorNPC();
+  ~jucatorNPC();
+
+
+};

@@ -7,8 +7,6 @@
 #include<fstream>
 #include <utility>
 
-using namespace std;
-
 void Jucator::afisareJucator() {
   std::cout<< "jucator: "<< nume<<std::endl<< "elo: "<< elo<<std::endl;
 };
@@ -24,6 +22,9 @@ void Jucator::setNume(std::string nume) {
 }
 void Jucator::setElo(int elo) {
   this->elo = elo;
+}
+void Jucator :: setCategorie(std::string cat) {
+  this->categorie = cat;
 }
 
 
