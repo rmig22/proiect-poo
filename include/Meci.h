@@ -1,15 +1,20 @@
 //
 // Created by RImoc on 5/16/2025.
 //
-#include "jucatorNPC.h"
+#include "../src/jucatorNPC.cpp"
+#include "../src/jucatorUtilizator.cpp"
 #ifndef MATCH_H
 #define MATCH_H
 
 #endif //MATCH_H
 
 class Match{
-  private:
+  protected:
     jucatorNPC NPC1;
+    Jucator *player;
+    std::string meci_status;
   public:
-    Match(const jucatorNPC& NPC) : NPC1 (NPC) {};
+    Match(const jucatorNPC& NPC, Jucator *jucator);
+    ~Match() = default;
+    std::string getStatus();
 };

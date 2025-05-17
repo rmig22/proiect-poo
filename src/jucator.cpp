@@ -26,7 +26,9 @@ void Jucator::setElo(int elo) {
 void Jucator :: setCategorie(std::string cat) {
   this->categorie = cat;
 }
-
+std::string Jucator :: getCategorie() {
+  return categorie;
+}
 
 
 

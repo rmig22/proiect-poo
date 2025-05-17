@@ -1,15 +1,16 @@
 #include <iostream>
 #include <array>
-#include "src/jucatorUtilizator.cpp"
+#include "src/Turnament.cpp"
 #include <fstream>
 
 int main() {
     //Jucator jucator1( 1500);
     // jucator1.setNume("Ruxi");
     // jucator1.afisareJucator();
-    jucatorUtilizator jucatorul;
+    //jucatorUtilizator jucatorul;
     // jucatorul.actualizare();
     // jucatorul.afisareJucator();
+    Turnament();
 
     return 0;
 }
