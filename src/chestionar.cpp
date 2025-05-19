@@ -6,7 +6,6 @@
 #include <vector>
 #include <cstring>
 #include <algorithm>
-#include <cstdlib>
 #include <random>
 Chestionar::Chestionar() {
     this->intrebarile_totale = {
@@ -18,7 +17,7 @@ Chestionar::Chestionar() {
         Intrebare("6. What's the Queen's superpower?", 'b', {"a). Instant checkmate by glare ", "b). Unlimited diagonal and straight-line movement", "c). Mind control", "d). Shopping across the board"}),
         Intrebare("7. What's castling, really?", 'a', {"a). When the King runs behind the Rook for safety", "b). A medieval dating ritual","c). King and Rook swapping fashion tips", "d). Chess yoga"}),
         Intrebare("8. Why don't pawns skip their first move opportunity to go two spaces?", 'd', {"a). They're afraid of commitment", "b). That's their one chance to feel special","c). They think they'll trip", "d). Chess rules only allow it once"}),
-        Intrebare("8. What happens if you try to move a piece through another one illegally?", 'd', {"a). It files a lawsuit", "b). The board self-destructs","c). The move is not allowed", "d). The chess gods smite you"})
+        Intrebare("8. What happens if you try to move a piece through another one illegally?", 'c', {"a). It files a lawsuit", "b). The board self-destructs","c). The move is not allowed", "d). The chess gods smite you"})
     };
     std::random_device rd;
     std::mt19937 rng(rd());

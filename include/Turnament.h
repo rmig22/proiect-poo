@@ -9,8 +9,19 @@
 
 class Turnament{
   friend class Match;
-  private:
+  protected:
+    std::vector<jucatorNPC> multime_jucatori= {};
+    std::vector<jucatorNPC> jucatori_participanti = {};
+    std::vector<jucatorNPC> sferturi = {};
+    std::vector<jucatorNPC> semi_finale = {};
+    jucatorNPC finala;
   public:
     Turnament();
+    ~Turnament() = default;
+    void simulate();
+    void continuare_sferturi(std::vector<jucatorNPC> &sferturi, jucatorUtilizator &X);
+    void continuare_semi_finale(std::vector<jucatorNPC> &semi_finale, jucatorUtilizator &X);
+    void continuare_finala(jucatorNPC &finala, jucatorUtilizator &X);
 };
+
 

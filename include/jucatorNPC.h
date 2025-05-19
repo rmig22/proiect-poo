@@ -9,8 +9,8 @@
 class jucatorNPC : public Jucator{
 
   public:
-  jucatorNPC();
-  ~jucatorNPC() override = default;
+    jucatorNPC();
+    ~jucatorNPC() override = default;
 
     friend std::istream& operator>>(std::istream& fin, jucatorNPC& );
 };
