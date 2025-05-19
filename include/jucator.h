@@ -13,6 +13,7 @@ protected:
     std::string nume;
     int elo = 1000;
     std::string categorie;
+    std::string style;
     // void afisareJucator(){
     //   std::cout<<"nume:" <<nume<< " "<< "elo: "<< elo;
     //   }
@@ -22,16 +23,17 @@ public:
     std::string getNume() const;
     int getElo() const;
     std::string getCategorie();
-    Chestionar getChestionar() const;
+    //Chestionar getChestionar() const;
     void setNume(std::string nume);
     void setElo(int elo);
-    void setChestionar(Chestionar chestionar);
-
-    virtual void setCategorie(std::string cat);
-
+    std::string getStyle();
+    //void setChestionar(Chestionar chestionar);
+    void setCategorie(std::string cat);
     virtual void afisareJucator();
     virtual ~Jucator() = default;
     //void static intdinfisier(std::string& fisier);
+    virtual void player_style(Jucator* jucator);
+    void setStyle(std::string style);
 };
 
 #endif //JUCATOR_H

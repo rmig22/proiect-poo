@@ -53,3 +53,22 @@ void jucatorUtilizator:: actualizare(int p){
   Jucator::afisareJucator();
   std::cout<<"categorie: "<<categorie<<endl;
 }
+
+void jucatorUtilizator:: player_style(Jucator* jucator){
+    int optiune;
+    std::cin>>optiune;
+    switch(optiune) {
+      case 1://alege sa joace agresiv pentru:
+        if (jucator->getStyle()=="chill") {
+          //p+=1
+        }
+      case 2://alege sa joace chill pentru:
+        if (jucator->getStyle()=="calculat") {
+          //p+=1;
+        }
+      case 3://alege sa joace calculat pentru:
+        if (jucator->getStyle()=="agresiv") {
+          //p+=1
+        }
+    }
+  }

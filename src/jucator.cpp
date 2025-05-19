@@ -29,6 +29,12 @@ void Jucator :: setCategorie(std::string cat) {
 std::string Jucator :: getCategorie() {
   return categorie;
 }
+std::string Jucator :: getStyle() {
+  return style;
+}
+void Jucator::setStyle(std::string Style) {
+  this->style = Style;
+}
 
 
 

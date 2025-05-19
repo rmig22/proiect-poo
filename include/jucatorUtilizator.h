@@ -17,6 +17,7 @@ class jucatorUtilizator : public Jucator {
     void actualizare(int p);
     void afisareJucator() override;
     ~jucatorUtilizator() override = default;
+    void player_style(Jucator* jucator) override;
 };
 
 
