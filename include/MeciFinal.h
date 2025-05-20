@@ -8,6 +8,9 @@
 #endif //MECIFINAL_H
 
 class MeciFinal : public Match{
+  protected:
+    int p;
   public:
+    MeciFinal(jucatorUtilizator& user, jucatorBoss& veteran);
 
-}
+};

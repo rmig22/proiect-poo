@@ -2,7 +2,7 @@
 // Created by RImoc on 5/16/2025.
 //
 #include "../src/jucatorNPC.cpp"
-#include "../src/jucatorUtilizator.cpp"
+#include "../src/jucatorBoss.cpp"
 #ifndef MATCH_H
 #define MATCH_H
 
