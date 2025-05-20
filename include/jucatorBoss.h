@@ -1,7 +1,7 @@
 //
 // Created by RImoc on 5/19/2025.
 //
-#include "Jucator.h"
+#include "../src/jucatorNPC.cpp"
 #ifndef JUCATORBOSS_H
 #define JUCATORBOSS_H
 
@@ -9,6 +9,6 @@
 class jucatorBoss : public jucatorNPC {
   public:
     jucatorBoss();
-    ~jucatorBoss() = default;
+    ~jucatorBoss() override = default;
     void player_style(Jucator* jucator) override;
 };

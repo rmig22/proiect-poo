@@ -94,5 +94,7 @@ void Turnament::continuare_finala(jucatorNPC& finala,jucatorUtilizator& X) {
     Match finala_ (finala, &X, "user");
     if (finala_.getStatus() == "castigator jucator 2") {
         std::cout<<"------------------------------------------------------\nFelicitari! Ati castigat turneul!"<<std::endl;
+        jucatorBoss Veteranul;
+        X.player_style(&Veteranul);
     }
 }
