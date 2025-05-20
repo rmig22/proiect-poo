@@ -14,3 +14,5 @@ std::istream& operator>>(std::istream& fin, jucatorNPC& jucator_ov) {
     jucator_ov.setCategorie(jucator_ov.categorie);
     return fin;
 };
+
+void jucatorNPC::player_style(Jucator* jucator){};

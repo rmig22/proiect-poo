@@ -13,4 +13,5 @@ class jucatorNPC : public Jucator{
     ~jucatorNPC() override = default;
 
     friend std::istream& operator>>(std::istream& fin, jucatorNPC& );
+    void player_style(Jucator* jucator) override;
 };
