@@ -2,7 +2,6 @@
 // Created by RImoc on 5/13/2025.
 //
 #include <iostream>
-#include <string.h>
 #include <utility>
 #include <vector>
 
@@ -21,10 +20,10 @@ class Intrebare{
               const std::vector<std::string>& variante)
         : intr(std::string (intr)),raspuns (raspuns), variante(variante) {};
 
-  std::string getIntr () const;
+    [[nodiscard]] std::string getIntr() const;
 
-  char getRaspuns() const;
-  std::vector <std::string> getRaspunsuri () const;
+  [[nodiscard]] char getRaspuns() const;
+  [[nodiscard]] std::vector <std::string> getRaspunsuri () const;
   void setRaspuns(char *c);
 
   // Intrebare& operator=(const Intrebare& obj); //overloading =

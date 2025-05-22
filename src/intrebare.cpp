@@ -7,7 +7,7 @@
 #include "../include/intrebare.h"
 #include <cstring>
 
-std::string Intrebare:: getIntr () const {
+std::string Intrebare::getIntr() const {
   return intr;
 }
 

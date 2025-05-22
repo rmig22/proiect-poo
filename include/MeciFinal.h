@@ -9,7 +9,7 @@
 
 class MeciFinal : public Match{
   protected:
-    int p=1;
+    //int p=1;
     //std::string stil_joc;
     jucatorUtilizator& user;
     jucatorBoss& veteran;

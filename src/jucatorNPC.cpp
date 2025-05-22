@@ -5,7 +5,7 @@
 #include <fstream>
 using namespace std;
 
-jucatorNPC::jucatorNPC() {};
+jucatorNPC::jucatorNPC() = default;
 
 std::istream& operator>>(std::istream& fin, jucatorNPC& jucator_ov) {
     fin>>jucator_ov.nume >>jucator_ov.elo>>jucator_ov.categorie;

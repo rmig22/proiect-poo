@@ -26,7 +26,7 @@ Match::Match(const jucatorNPC &NPC, Jucator *player,const std::string& tip_jucat
       meci_status = "castigator jucator 2";
     }
   }
-  else if (abs(NPC1.getElo() -  player->getElo()) >200 && abs(NPC1.getElo() -  player->getElo() < 800)){
+  else if (abs(NPC1.getElo() -  player->getElo()) >200 && abs(NPC1.getElo() -  player->getElo()) < 800){
     if (NPC1.getElo() > player->getElo()) {
       x = rand() % 10;
       if (x <=8) {
