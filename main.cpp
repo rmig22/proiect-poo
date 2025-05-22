@@ -10,7 +10,7 @@ int main() {
     //jucatorUtilizator jucatorul;
     // jucatorul.actualizare();
     // jucatorul.afisareJucator();
-    Turnament();
+    Turnament Turneu;
 
     return 0;
 }

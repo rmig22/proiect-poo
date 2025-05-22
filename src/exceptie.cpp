@@ -3,7 +3,6 @@
 //
 
 #include "exceptie.h"
-#include <string.h>
 Exceptie::Exceptie(const std::string& mesaj) : mesaj(mesaj){}
 
 const char* Exceptie::what() const noexcept{

@@ -6,12 +6,12 @@
 #define JUCATORNPC_H
 
 #endif //JUCATORNPC_H
-class jucatorNPC : public Jucator{
+class jucatorNPC : public Jucator {
+public:
+  jucatorNPC();
+  ~jucatorNPC() override = default;
 
-  public:
-    jucatorNPC();
-    ~jucatorNPC() override = default;
+  friend std::istream& operator>>(std::istream& fin, jucatorNPC& );
 
-    friend std::istream& operator>>(std::istream& fin, jucatorNPC& );
-    void player_style(Jucator* jucator, int optiune) override;
+  void player_style(Jucator* jucator, int optiune) override;
 };

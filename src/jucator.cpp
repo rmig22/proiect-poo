@@ -3,8 +3,6 @@
 //
 #include "../include/jucator.h"
 #include <iostream>
-#include <string.h>
-#include<fstream>
 #include <utility>
 
 void Jucator::afisareJucator() {

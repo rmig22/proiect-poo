@@ -103,8 +103,8 @@ void Turnament::continuare_finala(jucatorNPC& finala,jucatorUtilizator& X) {
         system("cls");
         std::cout<<"------------------------------------------------------\nFelicitari! Ati castigat turneul!"<<std::endl;
         jucatorBoss Veteranul;
-        Veteranul.setStyle("agresiv"); //fac asta in meci final
-        //MeciFinal meci_final(X, Veteranul);
-        X.player_style(&Veteranul);
+        //Veteranul.setStyle("agresiv"); //fac asta in meci final
+        MeciFinal meci_final(X, Veteranul);
+        //X.player_style(&Veteranul, int optiune);
     }
 }
