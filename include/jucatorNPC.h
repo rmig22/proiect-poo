@@ -1,7 +1,7 @@
 //
 // Created by RImoc on 5/15/2025.
 //
-#include "Jucator.h"
+#include "jucator.h"
 #ifndef JUCATORNPC_H
 #define JUCATORNPC_H
 
