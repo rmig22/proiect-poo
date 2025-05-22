@@ -15,4 +15,4 @@ std::istream& operator>>(std::istream& fin, jucatorNPC& jucator_ov) {
     return fin;
 };
 
-void jucatorNPC::player_style(Jucator* jucator){};
+void jucatorNPC::player_style(Jucator* jucator, int optiune) {};

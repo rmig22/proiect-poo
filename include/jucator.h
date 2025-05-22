@@ -32,7 +32,7 @@ public:
     virtual void afisareJucator();
     virtual ~Jucator() = default;
     //void static intdinfisier(std::string& fisier);
-    virtual void player_style(Jucator* jucator) = 0;
+    virtual void player_style(Jucator* jucator, int optiune) = 0;
     void setStyle(std::string style);
 };
 

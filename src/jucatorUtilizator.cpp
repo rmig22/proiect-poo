@@ -2,7 +2,6 @@
 // Created by RImoc on 5/13/2025.
 //
 #include <iostream>
-#include <string.h>
 #include "../include/jucatorUtilizator.h"
 #include <cmath>
 using namespace std;
@@ -54,21 +53,32 @@ void jucatorUtilizator:: actualizare(int p){
   std::cout<<"categorie: "<<categorie<<endl;
 }
 
-void jucatorUtilizator:: player_style(Jucator* jucator){
-    int optiune;
-    std::cin>>optiune;
+void jucatorUtilizator:: player_style(Jucator* veteran, int optiune){
     switch(optiune) {
       case 1://alege sa joace agresiv pentru:
-        if (jucator->getStyle()=="chill") {
-          //p+=1
+        if (veteran->getStyle()=="chill") {
+          this->setPunctaj(this->getPunctaj() + 1);
         }
+      this->setStyle("agresiv");
+      break;
       case 2://alege sa joace chill pentru:
-        if (jucator->getStyle()=="calculat") {
-          //p+=1;
+        if (veteran->getStyle()=="calculat") {
+          this->setPunctaj(this->getPunctaj() + 1);
         }
+      this->setStyle("chill");
+      break;
       case 3://alege sa joace calculat pentru:
-        if (jucator->getStyle()=="agresiv") {
-          //p+=1
+        if (veteran->getStyle()=="agresiv") {
+          this->setPunctaj(this->getPunctaj() + 1);
         }
+      this->setStyle("calculat");
+      break;
     }
+  }
+
+int jucatorUtilizator::getPunctaj() const {
+    return punctaj;
+  }
+void jucatorUtilizator::setPunctaj(int punctaj) {
+    this->punctaj = punctaj;
   }

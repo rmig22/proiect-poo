@@ -2,6 +2,7 @@
 // Created by RImoc on 5/13/2025.
 //
 #include "../include/chestionar.h"
+#include "exceptie.cpp"
 #include <iostream>
 #include <vector>
 #include <cstring>
@@ -31,8 +32,21 @@ Chestionar::Chestionar() {
     for (Intrebare& i : set_intrebari) {
         std::cout << i;
         char r;
-        std::cin>>r;
-        r = tolower(r);
+        std::string test_r;
+        while (true) {
+            std::getline(std::cin, test_r);
+            try {
+                if (test_r != "a" && test_r != "b" && test_r != "c" && test_r != "A" && test_r != "B" && test_r != "C") {
+                    throw Exceptie("Va rugam sa introduceti una dintre optiunile: a, b sau c");
+                }
+                break;
+            }
+            catch (const Exceptie& e) {
+                std::cerr << "InputError: " << e.what() << std::endl;
+                std::cout << "Incercati din nou: ";
+            }
+        }
+        r = test_r[0];
         if (r == i.getRaspuns()) {
             std::cout<< std::endl<<"Corect!"<<std::endl<<std::endl;
             P+=1;

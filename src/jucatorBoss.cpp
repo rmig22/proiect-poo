@@ -5,18 +5,18 @@
 
 jucatorBoss::jucatorBoss() = default;
 
-void jucatorBoss::player_style(Jucator* jucator) {
-    if (jucator->getStyle() == "aggresiv"){
+void jucatorBoss::player_style(Jucator* jucator, int optiune) {
+    if (jucator->getStyle() == "agresiv"){
       std::cout<<"Joci agresiv! Daca nu esti calm, faci greseli..."<<std::endl;
       this->setStyle("chill");
     }
     else if (jucator->getStyle() == "chill"){
       std::cout<<"Joci cam prea nepasator, o sa analizez jocul..."<<std::endl;
-      this->setStyle("calculating");
+      this->setStyle("calculat");
     }
     else if (jucator->getStyle() == "calculat"){
       std::cout<<"Te gandesti cam mult, o sa fac ritmul mai rapid..."<<std::endl;
-      this->setStyle("aggresive");
+      this->setStyle("agresiv");
     }
-    //p++;
+    p++;
 }

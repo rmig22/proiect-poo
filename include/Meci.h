@@ -16,7 +16,9 @@ class Match{
     Jucator *player;
     std::string meci_status;
     std::string tip_jucator;
+    int p=1;
   public:
+    Match() = default;
     Match(const jucatorNPC& NPC, Jucator *jucator, const std::string &tip_jucator);
     ~Match() = default;
     std::string getStatus();

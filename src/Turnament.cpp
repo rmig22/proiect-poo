@@ -10,12 +10,6 @@
 using namespace std;
 
 Turnament::Turnament() {
-    //jucatorUtilizator Jucatorul;
-    //jucatorNPC Jucatorul2;
-    //cout<<"a creat jucatorii" <<endl;
-    //Match meci (Jucatorul2, &Jucatorul);
-    //cout<<meci.getStatus();
-
      ifstream fin ("../participanti.txt");
      jucatorNPC x;
      while (fin>>x) {
@@ -29,7 +23,9 @@ Turnament::Turnament() {
         jucatori_participanti.push_back(multime_jucatori[i]);
     }
     jucatorUtilizator X;
-    std::cout<<"Incepe turneul!"<<std::endl<<"------------------------------------------------------"<<std::endl;
+    system("cls");
+    std::cout<<"Incepe turneul!"<<std::endl<<"------------------------------------------------------"<<std::endl<<std::endl;
+    std::cin.ignore();
     // Match Meci(jucatori_participanti[2], &X);
     for (int i=0; i<14; i+=2) {
         Match meci(jucatori_participanti[i], &jucatori_participanti[i+1], "npc");
@@ -47,7 +43,12 @@ Turnament::Turnament() {
         simulate();
     }
     else {
+        std::cout<<"Apasati Enter ca sa continuati!";
+        std::cin.ignore();
+        std::cout<<std::endl;
         std::cout<<"Felicitari! Ati ajuns in sferturi!"<<std::endl;
+        std::cout<<"Apasati Enter ca sa continuati!";
+        std::cin.ignore();
         continuare_sferturi(sferturi, X );
     }
 }
@@ -76,6 +77,9 @@ void Turnament::continuare_sferturi(std::vector<jucatorNPC> &sferturi, jucatorUt
     //cout<<sferturi[6].getNume()<<" "<< X.getNume()<<" "<<sferturiUser.meci_status<<std::endl;
 }
 void Turnament::continuare_semi_finale(std::vector<jucatorNPC> &semi_finale, jucatorUtilizator &X) {
+    std::cout<<std::endl<<"------------------------------------------------------\nFelicitari! Ati ajuns in semi-finala!"<<std::endl;
+    std::cout<<"Apasati Enter ca sa continuati!";
+    std::cin.ignore();
     Match semi_finale1(semi_finale[0], &semi_finale[1], "npc");
     if (semi_finale1.getStatus() == "castigator jucator 1") {
         this->finala =semi_finale[0];
@@ -85,7 +89,10 @@ void Turnament::continuare_semi_finale(std::vector<jucatorNPC> &semi_finale, juc
     }
     Match semi_finale2(semi_finale[2], &X, "user");
     if (semi_finale2.getStatus() == "castigator jucator 2") {
+        std::cout<<std::endl;
         std::cout<<"------------------------------------------------------\nFelicitari! Ati ajuns in finala!"<<std::endl;
+        std::cout<<"Apasati Enter pentru a continua!";
+        std::cin.ignore();
         continuare_finala(finala, X);
     }
 }
@@ -93,8 +100,10 @@ void Turnament::continuare_finala(jucatorNPC& finala,jucatorUtilizator& X) {
     std::cout<<finala.getCategorie()<<std::endl;
     Match finala_ (finala, &X, "user");
     if (finala_.getStatus() == "castigator jucator 2") {
+        system("cls");
         std::cout<<"------------------------------------------------------\nFelicitari! Ati castigat turneul!"<<std::endl;
         jucatorBoss Veteranul;
-        X.player_style(&Veteranul);
+        Veteranul.setStyle("agresiv"); //fac asta in meci final
+        //MeciFinal meci_final(X, Veteranul);
     }
 }

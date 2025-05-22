@@ -11,13 +11,17 @@
 
 
 class jucatorUtilizator : public Jucator {
+    protected:
+    int punctaj=0;
 
   public:
     jucatorUtilizator();
     void actualizare(int p);
     void afisareJucator() override;
     ~jucatorUtilizator() override = default;
-    void player_style(Jucator* jucator) override;
+    void player_style(Jucator* jucator, int optiune) override;
+    int getPunctaj() const;
+    void setPunctaj(int punctaj);
 };
 
 

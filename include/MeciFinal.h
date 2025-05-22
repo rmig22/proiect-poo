@@ -9,8 +9,12 @@
 
 class MeciFinal : public Match{
   protected:
-    int p;
+    int p=1;
+    //std::string stil_joc;
+    jucatorUtilizator& user;
+    jucatorBoss& veteran;
   public:
     MeciFinal(jucatorUtilizator& user, jucatorBoss& veteran);
-
+    ~MeciFinal() = default;
+    void meci_style();
 };
