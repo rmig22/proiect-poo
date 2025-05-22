@@ -105,5 +105,6 @@ void Turnament::continuare_finala(jucatorNPC& finala,jucatorUtilizator& X) {
         jucatorBoss Veteranul;
         Veteranul.setStyle("agresiv"); //fac asta in meci final
         //MeciFinal meci_final(X, Veteranul);
+        X.player_style(&Veteranul);
     }
 }
