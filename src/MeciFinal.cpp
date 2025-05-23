@@ -43,17 +43,19 @@ void MeciFinal:: meci_style() const {
 }
 
 int MeciFinal::choose_style(const std::string& prompt) const {
-    int optiune;
-    while (true) {
+    int optiune, nr_incercari = 3;
+    while (nr_incercari > 0) {
         try {
             std::cout << prompt;
             std::cin >> optiune;
 
             if (std::cin.fail()) {
+                nr_incercari--;
                 throw std::invalid_argument("Introdu un numar");
             }
 
             if (optiune < 1 || optiune > 3) {
+                nr_incercari--;
                 throw std::out_of_range("Introdu un numar intr 1, 2 si 3");
             }
 
