@@ -9,7 +9,7 @@ MeciFinal::MeciFinal(jucatorUtilizator& user, jucatorBoss& veteran) : user(user)
     std::cout<<"Meciul final are loc intre tine si castigatorul turneului de anul trecut: Mauritio"<<std::endl;
     meci_style();
 }
-void MeciFinal:: meci_style(){
+void MeciFinal:: meci_style() const {
     std::cout<<"Mauritio a ales sa joace: "<<veteran.getStyle()<<std::endl;
   std::cout<<"Alege stilul de joc: "<<std::endl<<"1. Agresiv"<<std::endl<<"2. Chill"<<std::endl<<"3. Calculat"<<std::endl;
   int optiune;

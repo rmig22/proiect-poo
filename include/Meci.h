@@ -1,6 +1,7 @@
 //
 // Created by RImoc on 5/16/2025.
 //
+#pragma once
 #include "../src/jucatorBoss.cpp"
 #include "../src/jucatorUtilizator.cpp"
 #ifndef MATCH_H

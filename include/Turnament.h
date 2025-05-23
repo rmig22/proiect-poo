@@ -1,6 +1,7 @@
 //
 // Created by RImoc on 5/16/2025.
 //
+#pragma once
 #include "../src/MeciFinal.cpp"
 #ifndef TURNAMENT_H
 #define TURNAMENT_H

@@ -1,6 +1,7 @@
 //
 // Created by RImoc on 5/22/2025.
 //
+#pragma once
 #include <exception>
 #include <iostream>
 #ifndef EXCEPTIE_H

@@ -1,6 +1,7 @@
 //
 // Created by RImoc on 5/13/2025.
 //
+#pragma once
 #include <iostream>
 #include <vector>
 
