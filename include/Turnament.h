@@ -2,10 +2,10 @@
 // Created by RImoc on 5/16/2025.
 //
 #pragma once
-#include "../src/MeciFinal.cpp"
+#include "MeciFinal.h"
 #ifndef TURNAMENT_H
 #define TURNAMENT_H
-
+#include <vector>
 #endif //TURNAMENT_H
 
 class Turnament{

@@ -4,8 +4,8 @@
 
 #ifndef JUCATOR_H
 #define JUCATOR_H
-#include "../src/chestionar.cpp"
 #include <string>
+#include "chestionar.h"
 class Jucator{
 protected:
     std::string nume;

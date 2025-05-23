@@ -3,7 +3,7 @@
 //
 #pragma once
 
-#include "../src/jucator.cpp"
+#include "jucator.h"
 #ifndef JUCATORUTILIZATOR_H
 #define JUCATORUTILIZATOR_H
 

@@ -2,7 +2,7 @@
 // Created by RImoc on 5/19/2025.
 //
 #include "jucatorBoss.h"
-
+#include <iostream>
 jucatorBoss::jucatorBoss() = default;
 
 void jucatorBoss::player_style(Jucator* jucator, int) {

@@ -4,7 +4,8 @@
 #pragma once
 
 #include <vector>
-#include "../src/intrebare.cpp"//
+#include "intrebare.h"//
+#include "exceptie.h"
 #ifndef CHESTIONAR_H
 #define CHESTIONAR_H
 

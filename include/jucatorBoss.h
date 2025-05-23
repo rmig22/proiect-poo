@@ -2,7 +2,7 @@
 // Created by RImoc on 5/19/2025.
 //
 #pragma once
-#include "../src/jucatorNPC.cpp"
+#include "jucatorNPC.h"
 #ifndef JUCATORBOSS_H
 #define JUCATORBOSS_H
 

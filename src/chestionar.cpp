@@ -2,7 +2,6 @@
 // Created by RImoc on 5/13/2025.
 //
 #include "../include/chestionar.h"
-#include "exceptie.cpp"
 #include <iostream>
 #include <vector>
 #include <algorithm>

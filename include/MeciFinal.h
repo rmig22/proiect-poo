@@ -2,7 +2,7 @@
 // Created by RImoc on 5/19/2025.
 //
 #pragma once
-#include "Meci.cpp"
+#include "Meci.h"
 #ifndef MECIFINAL_H
 #define MECIFINAL_H
 

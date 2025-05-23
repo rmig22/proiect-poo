@@ -7,19 +7,19 @@
 #include "../include/intrebare.h"
 
 std::string Intrebare::getIntr() const {
-  return intr;
+    return intr;
 }
 
 char Intrebare::getRaspuns() const {
-  return raspuns;
+    return raspuns;
 }
 
 std::vector<std::string> Intrebare::getRaspunsuri() const {
-  return variante;
+    return variante;
 }
 
 void Intrebare::setRaspuns(char *c) {
-  this->raspuns = c[0];
+    this->raspuns = c[0];
 }
 
 // Intrebare& Intrebare::operator=(const Intrebare& obj) {
@@ -33,10 +33,10 @@ void Intrebare::setRaspuns(char *c) {
 // }
 
 std::ostream& operator << (std::ostream& c, const Intrebare &i) {
-  c<<i.getIntr()<< std::endl;//<< i.getRaspunsuri() << std::endl << "Raspuns: ";
-  for (const auto& x : i.getRaspunsuri()) {
-    c<<x<<std::endl;
-  }
-  c << "Raspuns: ";
-  return c;
+    c<<i.getIntr()<< std::endl;//<< i.getRaspunsuri() << std::endl << "Raspuns: ";
+    for (const auto& x : i.getRaspunsuri()) {
+        c<<x<<std::endl;
+    }
+    c << "Raspuns: ";
+    return c;
 }

@@ -27,7 +27,7 @@ class Intrebare{
   void setRaspuns(char *c);
 
   // Intrebare& operator=(const Intrebare& obj); //overloading =
-  std::ostream& operator << (std::ostream&); //overloading <<
+  friend std::ostream& operator << (std::ostream& os, const Intrebare& i); //
 
 
 };

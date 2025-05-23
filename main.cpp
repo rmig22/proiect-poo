@@ -1,6 +1,6 @@
 #include <iostream>
 #include <array>
-#include "src/Turnament.cpp"
+#include "include/Turnament.h"
 #include <fstream>
 
 int main() {
