@@ -24,7 +24,7 @@ void MeciFinal:: meci_style() const {
     std::cout<<"Runda a doua! Mauritio joaca acum "<<veteran.getStyle()<<std::endl;
     std::cout<<"Alege stilul de joc: "<<std::endl<<"1. Agresiv"<<std::endl<<"2. Chill"<<std::endl<<"3. Calculat"<<std::endl;
 
-    std::cin>>optiune;
+    optiune = choose_style("Alege stilul de joc:\n1. Agresiv\n2. Chill\n3. Calculat\n");
     user.player_style(&veteran, optiune);
     veteran.player_style(&user, optiune);
     std::cout<<std::endl<<"Punctaj: "<<user.getPunctaj()<<std::endl;
@@ -32,7 +32,7 @@ void MeciFinal:: meci_style() const {
     std::cout<<"Runda a treia! Mauritio joaca acum"<< veteran.getStyle()<<std::endl;;
     std::cout<<"Alege stilul de joc: "<<std::endl<<"1. Agresiv"<<std::endl<<"2. Chill"<<std::endl<<"3. Calculat"<<std::endl;
 
-    std::cin>>optiune;
+    optiune = choose_style("Alege stilul de joc:\n1. Agresiv\n2. Chill\n3. Calculat\n");
     user.player_style(&veteran, optiune);
     veteran.player_style(&user, optiune);
     std::cout<<std::endl<<"Punctaj: "<<user.getPunctaj()<<std::endl;
@@ -62,7 +62,7 @@ int MeciFinal::choose_style(const std::string& prompt) const {
             std::cerr << "Eroare: " << e.what() << "\n";
 
             std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         }
     }
 }
