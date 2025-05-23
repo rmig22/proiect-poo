@@ -6,6 +6,7 @@
 #include <vector>
 #include <algorithm>
 #include <random>
+#include <string.h>
 Chestionar::Chestionar() {
     this->intrebarile_totale = {
         Intrebare("1. What happens when a pawn reaches the other side of the board?", 'b', {"a). It explodes", "b). It turns into a queen","c). It retires", "d). It throws a party"}),
@@ -27,13 +28,17 @@ Chestionar::Chestionar() {
 
 
     int P = 0;
+    std::cin.get();
     for (Intrebare& i : set_intrebari) {
         std::cout << i;
         char r = '\0';
-        std::string test_r;
+        std::string test_r="";
         int incercari = 2;
         while (incercari!=0) {
-            std::getline(std::cin, test_r);
+            if (!std::getline(std::cin, test_r)) {
+                std::cerr << "InputError: End of input or input failure." << std::endl;
+                break;
+            }
             try {
                 if (test_r != "a" && test_r != "b" && test_r != "c" && test_r != "A" && test_r != "B" && test_r != "C") {
                     throw Exceptie("Va rugam sa introduceti una dintre optiunile: a, b sau c");
@@ -47,7 +52,7 @@ Chestionar::Chestionar() {
                 incercari--;
             }
         }
-        r = test_r[0];
+            r = test_r[0];
         if (r == i.getRaspuns()) {
             std::cout<< std::endl<<"Corect!"<<std::endl<<std::endl;
             P+=1;
