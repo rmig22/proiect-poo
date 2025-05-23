@@ -29,9 +29,10 @@ Chestionar::Chestionar() {
     int P = 0;
     for (Intrebare& i : set_intrebari) {
         std::cout << i;
-        char r;
+        char r = '\0';
         std::string test_r;
-        while (true) {
+        int incercari = 2;
+        while (incercari!=0) {
             std::getline(std::cin, test_r);
             try {
                 if (test_r != "a" && test_r != "b" && test_r != "c" && test_r != "A" && test_r != "B" && test_r != "C") {
@@ -41,7 +42,9 @@ Chestionar::Chestionar() {
             }
             catch (const Exceptie& e) {
                 std::cerr << "InputError: " << e.what() << std::endl;
-                std::cout << "Incercati din nou: ";
+                if (incercari!=1)
+                    std::cout << "Incercati din nou: ";
+                incercari--;
             }
         }
         r = test_r[0];
