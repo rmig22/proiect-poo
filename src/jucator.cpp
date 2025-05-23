@@ -33,7 +33,9 @@ std::string Jucator :: getStyle() {
 void Jucator::setStyle(std::string Style) {
   this->style = Style;
 }
+Jucator::Jucator() = default;
 
+Jucator::Jucator(const Jucator& other) : nume(other.nume), elo(other.elo), categorie(other.categorie), style(other.style) {}
 
 
 

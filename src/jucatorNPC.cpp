@@ -17,3 +17,5 @@ std::istream& operator>>(std::istream& fin, jucatorNPC& jucator_ov) {
 }
 
 void jucatorNPC::player_style(Jucator*, int) {};
+jucatorNPC::jucatorNPC(const jucatorNPC& other):Jucator(other) {
+}
