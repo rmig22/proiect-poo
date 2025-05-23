@@ -2,7 +2,7 @@
 // Created by RImoc on 5/19/2025.
 //
 #include "MeciFinal.h"
-#include <conio.h>
+//#include <conio.h>
 
 MeciFinal::MeciFinal(jucatorUtilizator& user, jucatorBoss& veteran) : user(user), veteran(veteran){
     system("cls");

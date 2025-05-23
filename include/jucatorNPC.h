@@ -13,5 +13,5 @@ public:
 
   friend std::istream& operator>>(std::istream& fin, jucatorNPC& );
 
-  void player_style(Jucator* jucator, int optiune) override;
+  void player_style(Jucator*, int) override;
 };

@@ -6,8 +6,6 @@
 #define JUCATOR_H
 #include "../src/chestionar.cpp"
 #include <string>
-#include <iostream>
-
 class Jucator{
 protected:
     std::string nume;

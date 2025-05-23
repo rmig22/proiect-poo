@@ -5,7 +5,6 @@
 #include <string>
 #include <vector>
 #include "../include/intrebare.h"
-#include <cstring>
 
 std::string Intrebare::getIntr() const {
   return intr;

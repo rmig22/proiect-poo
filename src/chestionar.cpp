@@ -5,7 +5,6 @@
 #include "exceptie.cpp"
 #include <iostream>
 #include <vector>
-#include <cstring>
 #include <algorithm>
 #include <random>
 Chestionar::Chestionar() {

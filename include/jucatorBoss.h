@@ -12,5 +12,5 @@ class jucatorBoss : public jucatorNPC {
   public:
     jucatorBoss();
     ~jucatorBoss() override = default;
-    void player_style(Jucator* jucator, int optiune) override;
+    void player_style(Jucator* jucator, int) override;
 };
