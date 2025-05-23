@@ -67,4 +67,5 @@ int MeciFinal::choose_style(const std::string& prompt) const {
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         }
     }
+    return 1;
 }
