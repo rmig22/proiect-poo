@@ -3,19 +3,20 @@
 //
 
 #include "Turnament.h"
-#include <fstream>
+#include <iostream>
+#include <sstream>
 #include <vector>
 #include <algorithm>
 #include <random>
 using namespace std;
 
 Turnament::Turnament() {
-     ifstream fin ("../participanti.txt");
+    std::istringstream fin("Mihai 1500 II\nAlex 1700 I\nTudor 1345 III\nMaria 1567 II\nIon 2041 maestru\nElena 1455 II\nCristian 1902 candidat_de_maestru\nAna 1320 III\nMihai 1789 I\nIoana 1543 II\nVlad 2120 maestru\nAlexandra 1651 I\nRadu 1473 II\nAlina 1930 candidat_de_maestru\nSorin 1822 candidat_de_maestru\nIrina 1699 I\nFlorin 1157 IV\nDiana 1625 I\nGeorge 1984 candidat_de_maestru\nOana 1234 III\nCiprian 1750 I\nGabriela 1518 II\nPaul 1103 IV\nLavinia 1356 III\nLucian 1855 cabdidat_maestru\nTeodora 1701 I\nDan 2077 maestru\nRaluca 1402 II\nCosmin 1596 I\nBianca 1388 III\nSebastian 1999 candidat_de_maestru\nNatalia 1220 III\n");
+
      jucatorNPC x;
      while (fin>>x) {
          multime_jucatori.push_back(x);
      }
-    fin.close();
     std::random_device rd;
     std::mt19937 rng(rd());
     std::shuffle(multime_jucatori.begin(), multime_jucatori.end(), rng);
