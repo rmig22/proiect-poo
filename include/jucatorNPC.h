@@ -17,4 +17,6 @@ public:
   void player_style(Jucator*, int) override;
 
   jucatorNPC(const jucatorNPC& other);
+
+  jucatorNPC& operator=(const jucatorNPC& other);
 };

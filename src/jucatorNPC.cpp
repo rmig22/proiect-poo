@@ -19,3 +19,11 @@ std::istream& operator>>(std::istream& fin, jucatorNPC& jucator_ov) {
 void jucatorNPC::player_style(Jucator*, int) {};
 jucatorNPC::jucatorNPC(const jucatorNPC& other):Jucator(other) {
 }
+
+jucatorNPC& jucatorNPC::operator=(const jucatorNPC& other) {
+    if (this != &other) {
+        Jucator::operator=(other);  // Assign base part
+        // Copy members of jucatorNPC if any
+    }
+    return *this;
+}

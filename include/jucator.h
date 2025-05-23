@@ -20,6 +20,7 @@ public:
 
     Jucator();
     Jucator(const Jucator& other);
+    Jucator& operator=(const Jucator& other);
     std::string getNume() const;
     int getElo() const;
     std::string getCategorie();
