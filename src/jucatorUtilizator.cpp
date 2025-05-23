@@ -79,6 +79,6 @@ void jucatorUtilizator:: player_style(Jucator* veteran, int optiune){
 int jucatorUtilizator::getPunctaj() const {
     return punctaj;
   }
-void jucatorUtilizator::setPunctaj(int punctaj) {
-    this->punctaj = punctaj;
+void jucatorUtilizator::setPunctaj(int punctaj1) {
+    this->punctaj = punctaj1;
   }

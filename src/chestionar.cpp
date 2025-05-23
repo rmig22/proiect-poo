@@ -6,7 +6,7 @@
 #include <vector>
 #include <algorithm>
 #include <random>
-#include <string.h>
+#include <string>
 Chestionar::Chestionar() {
     this->intrebarile_totale = {
         Intrebare("1. What happens when a pawn reaches the other side of the board?", 'b', {"a). It explodes", "b). It turns into a queen","c). It retires", "d). It throws a party"}),

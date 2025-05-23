@@ -15,11 +15,11 @@ std::string Jucator::getNume() const {
 int Jucator::getElo() const {
   return elo;
 }
-void Jucator::setNume(std::string nume) {
-  this->nume = std::move(nume);
+void Jucator::setNume(std::string nume1) {
+  this->nume = std::move(nume1);
 }
-void Jucator::setElo(int elo) {
-  this->elo = elo;
+void Jucator::setElo(int elo1) {
+  this->elo = elo1;
 }
 void Jucator :: setCategorie(std::string cat) {
   this->categorie = cat;

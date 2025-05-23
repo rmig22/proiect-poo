@@ -58,18 +58,18 @@ void Turnament::simulate() {
 
 }
 
-void Turnament::continuare_sferturi(std::vector<jucatorNPC> &sferturi, jucatorUtilizator &X) {
+void Turnament::continuare_sferturi(std::vector<jucatorNPC> &sferturi_local, jucatorUtilizator &X) {
     for (int i = 0; i<5; i+=2) {
-        Match sferturi1 (sferturi[i], &sferturi[i+1], "npc");
+        Match sferturi1 (sferturi_local[i], &sferturi_local[i+1], "npc");
         //cout<<sferturi[i].getNume()<< " "<< sferturi[i].getCategorie()<< " "<< sferturi[i+1].getNume()<<" "<< sferturi[i+1].getCategorie()<< " "<< sferturi1.getStatus()<<std::endl;
         if (sferturi1.getStatus() == "castigator jucator 1") {
-            semi_finale.push_back(sferturi[i]);
+            semi_finale.push_back(sferturi_local[i]);
         }
         else {
-            semi_finale.push_back(sferturi[i+1]);
+            semi_finale.push_back(sferturi_local[i+1]);
         }
     }
-    Match sferturiUser(sferturi[6], &X, "user");
+    Match sferturiUser(sferturi_local[6], &X, "user");
     if (sferturiUser.getStatus() == "castigator jucator 2") {
         continuare_semi_finale(semi_finale, X);
     }
@@ -77,18 +77,18 @@ void Turnament::continuare_sferturi(std::vector<jucatorNPC> &sferturi, jucatorUt
 
     //cout<<sferturi[6].getNume()<<" "<< X.getNume()<<" "<<sferturiUser.meci_status<<std::endl;
 }
-void Turnament::continuare_semi_finale(std::vector<jucatorNPC> &semi_finale, jucatorUtilizator &X) {
+void Turnament::continuare_semi_finale(std::vector<jucatorNPC> &semi_finale_local, jucatorUtilizator &X) {
     std::cout<<std::endl<<"------------------------------------------------------\nFelicitari! Ati ajuns in semi-finala!"<<std::endl;
     std::cout<<"Apasati Enter ca sa continuati!";
     std::cin.ignore();
-    Match semi_finale1(semi_finale[0], &semi_finale[1], "npc");
+    Match semi_finale1(semi_finale_local[0], &semi_finale_local[1], "npc");
     if (semi_finale1.getStatus() == "castigator jucator 1") {
-        this->finala =semi_finale[0];
+        this->finala =semi_finale_local[0];
     }
     else {
-        this->finala = semi_finale[1];
+        this->finala = semi_finale_local[1];
     }
-    Match semi_finale2(semi_finale[2], &X, "user");
+    Match semi_finale2(semi_finale_local[2], &X, "user");
     if (semi_finale2.getStatus() == "castigator jucator 2") {
         std::cout<<std::endl;
         std::cout<<"------------------------------------------------------\nFelicitari! Ati ajuns in finala!"<<std::endl;
