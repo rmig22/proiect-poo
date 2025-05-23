@@ -18,4 +18,6 @@ class MeciFinal : public Match{
     MeciFinal(jucatorUtilizator& user, jucatorBoss& veteran);
     ~MeciFinal() = default;
     void meci_style() const;
+
+    int choose_style(const std::string& prompt) const;
 };
