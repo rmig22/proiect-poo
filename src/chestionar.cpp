@@ -30,7 +30,7 @@ Chestionar::Chestionar() {
 
     int P = 0;
     //std::cin.get();
-    for (Intrebare& i : set_intrebari) {
+    for (const Intrebare& i : set_intrebari) {
         std::cout << i;
         char r = '\0';
         std::string test_r="";
