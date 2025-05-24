@@ -5,7 +5,6 @@
 #ifndef JUCATOR_H
 #define JUCATOR_H
 #include <string>
-#include "chestionar.h"
 class Jucator{
 protected:
     std::string nume;
@@ -29,12 +28,12 @@ public:
     void setElo(int elo);
     std::string getStyle();
     //void setChestionar(Chestionar chestionar);
-    void setCategorie(std::string cat);
+    void setCategorie(const std::string& cat);
     virtual void afisareJucator();
     virtual ~Jucator() = default;
     //void static intdinfisier(std::string& fisier);
     virtual void player_style(Jucator* jucator, int optiune) = 0;
-    void setStyle(std::string style);
+    void setStyle(const std::string &style);
 };
 
 #endif //JUCATOR_H

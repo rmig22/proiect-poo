@@ -13,9 +13,8 @@ MeciFinal::MeciFinal(jucatorUtilizator& user, jucatorBoss& veteran) : user(user)
 void MeciFinal:: meci_style() const {
     std::cout<<"Mauritio a ales sa joace: "<<veteran.getStyle()<<std::endl;
   //std::cout<<"Alege stilul de joc: "<<std::endl<<"1. Agresiv"<<std::endl<<"2. Chill"<<std::endl<<"3. Calculat"<<std::endl;
-  int optiune;
     std::cout<<std::endl<<"Punctaj: "<<user.getPunctaj()<<std::endl;
-    optiune = choose_style("Alege stilul de joc:\n1. Agresiv\n2. Chill\n3. Calculat\n");
+    int optiune = choose_style("Alege stilul de joc:\n1. Agresiv\n2. Chill\n3. Calculat\n");
 
   user.player_style(&veteran, optiune);
   veteran.player_style(&user, optiune);

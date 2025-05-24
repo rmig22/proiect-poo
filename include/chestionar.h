@@ -4,8 +4,7 @@
 #pragma once
 
 #include <vector>
-#include "intrebare.h"//
-#include "exceptie.h"
+#include "intrebare.h"
 #ifndef CHESTIONAR_H
 #define CHESTIONAR_H
 
@@ -21,7 +20,8 @@ class Chestionar {
  public:
     Chestionar();
     int getPunctaj() const;
-   void afiseazaIntrebari() const;
+    // cppcheck-suppress unusedFunction
+    void afiseazaIntrebari() const;
     ~Chestionar() = default;
 };
 

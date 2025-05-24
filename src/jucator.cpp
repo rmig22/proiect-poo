@@ -21,7 +21,7 @@ void Jucator::setNume(std::string nume1) {
 void Jucator::setElo(int elo1) {
   this->elo = elo1;
 }
-void Jucator :: setCategorie(std::string cat) {
+void Jucator :: setCategorie(const std::string& cat) {
   this->categorie = cat;
 }
 std::string Jucator :: getCategorie() {
@@ -30,7 +30,7 @@ std::string Jucator :: getCategorie() {
 std::string Jucator :: getStyle() {
   return style;
 }
-void Jucator::setStyle(std::string Style) {
+void Jucator::setStyle(const std::string &Style) {
   this->style = Style;
 }
 Jucator::Jucator() = default;

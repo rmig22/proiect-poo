@@ -15,7 +15,7 @@ class Exceptie : public std::exception {
 
   explicit Exceptie(const std::string& str);
 
-  ~Exceptie() = default;
+  ~Exceptie() override = default;
 
     const char* what() const noexcept override;
 };

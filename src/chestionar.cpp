@@ -2,6 +2,7 @@
 // Created by RImoc on 5/13/2025.
 //
 #include "../include/chestionar.h"
+#include "exceptie.h"
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -21,7 +22,7 @@ Chestionar::Chestionar() {
     };
     std::random_device rd;
     std::mt19937 rng(rd());
-    std::shuffle(intrebarile_totale.begin(), intrebarile_totale.end(), rng);
+    std::ranges::shuffle(intrebarile_totale, rng);
     for (int i=0; i<5; i++) {
         set_intrebari.push_back(intrebarile_totale[i]);
     }

@@ -19,7 +19,7 @@ Turnament::Turnament() {
     }
     std::random_device rd;
     std::mt19937 rng(rd());
-    std::shuffle(multime_jucatori.begin(), multime_jucatori.end(), rng);
+    ranges::shuffle(multime_jucatori, rng);
     for (int i=0; i<=14; i++) {
         jucatori_participanti.push_back(multime_jucatori[i]);
     }

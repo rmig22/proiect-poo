@@ -4,6 +4,7 @@
 #include <iostream>
 #include "../include/jucatorUtilizator.h"
 #include <cmath>
+#include "chestionar.h"
 using namespace std;
 
 
@@ -75,6 +76,7 @@ void jucatorUtilizator:: player_style(Jucator* veteran, int optiune){
         }
       this->setStyle("calculat");
       break;
+      default: ;
     }
   }
 
