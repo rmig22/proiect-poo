@@ -6,7 +6,7 @@
 #include <vector>
 #include "../include/intrebare.h"
 
-std::string Intrebare::getIntr() const {
+const std::string& Intrebare::getIntr() const {
     return intr;
 }
 
@@ -14,7 +14,7 @@ char Intrebare::getRaspuns() const {
     return raspuns;
 }
 
-std::vector<std::string> Intrebare::getRaspunsuri() const {
+const std::vector<std::string>& Intrebare::getRaspunsuri() const {
     return variante;
 }
 
