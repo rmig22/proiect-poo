@@ -11,11 +11,11 @@
 class Exceptie : public std::exception {
   std::string mesaj;
   public:
-    Exceptie(std::string& mesaj);
+    explicit Exceptie(std::string& mesaj);
 
-  Exceptie(const std::string& str);
+    explicit Exceptie(const std::string& str);
 
-  ~Exceptie() override = default;
+    ~Exceptie() override = default;
 
     const char* what() const noexcept override;
 };
