@@ -24,7 +24,7 @@ class Intrebare{
 
   [[nodiscard]] char getRaspuns() const;
   [[nodiscard]] const std::vector <std::string>& getRaspunsuri () const;
-  void setRaspuns(char *c);
+  // void setRaspuns(char *c);
 
   // Intrebare& operator=(const Intrebare& obj); //overloading =
   friend std::ostream& operator << (std::ostream& os, const Intrebare& i); //

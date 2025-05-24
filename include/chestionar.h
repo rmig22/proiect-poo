@@ -21,7 +21,7 @@ class Chestionar {
     Chestionar();
     int getPunctaj() const;
     // cppcheck-suppress unusedFunction
-    void afiseazaIntrebari() const;
+    // void afiseazaIntrebari() const;
     ~Chestionar() = default;
 };
 

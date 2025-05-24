@@ -65,18 +65,18 @@ Chestionar::Chestionar() {
     this->punctaj = P;
 };
 
-void Chestionar::afiseazaIntrebari() const {
-    for (const auto& i : set_intrebari) {
-        std::cout << i.getIntr() << std::endl;
-
-        const auto& variante = i.getRaspunsuri();
-        for (size_t j = 0; j < variante.size(); ++j) {
-            std::cout << j + 1 << ". " << variante[j] << std::endl;
-        }
-
-        std::cout << std::endl;
-    }
-}
+// void Chestionar::afiseazaIntrebari() const {
+//     for (const auto& i : set_intrebari) {
+//         std::cout << i.getIntr() << std::endl;
+//
+//         const auto& variante = i.getRaspunsuri();
+//         for (size_t j = 0; j < variante.size(); ++j) {
+//             std::cout << j + 1 << ". " << variante[j] << std::endl;
+//         }
+//
+//         std::cout << std::endl;
+//     }
+// }
 
 int Chestionar::getPunctaj() const {
     return punctaj;

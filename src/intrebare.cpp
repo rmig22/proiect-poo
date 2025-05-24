@@ -18,9 +18,9 @@ const std::vector<std::string>& Intrebare::getRaspunsuri() const {
     return variante;
 }
 
-void Intrebare::setRaspuns(char *c) {
-    this->raspuns = c[0];
-}
+// void Intrebare::setRaspuns(char *c) {
+//     this->raspuns = c[0];
+// }
 
 // Intrebare& Intrebare::operator=(const Intrebare& obj) {
 //     this->getIntr().replace(this->getIntr().begin(), this->getIntr().end(), obj.getIntr());
