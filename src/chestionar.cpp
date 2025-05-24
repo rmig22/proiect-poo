@@ -28,7 +28,7 @@ Chestionar::Chestionar() {
 
 
     int P = 0;
-    std::cin.get();
+    //std::cin.get();
     for (Intrebare& i : set_intrebari) {
         std::cout << i;
         char r = '\0';
@@ -40,7 +40,7 @@ Chestionar::Chestionar() {
                 break;
             }
             try {
-                if (test_r != "a" && test_r != "b" && test_r != "c" && test_r != "A" && test_r != "B" && test_r != "C") {
+                if (test_r != "a" && test_r != "b" && test_r != "c" && test_r != "d" && test_r != "A" && test_r != "B" && test_r != "C" && test_r != "D") {
                     throw Exceptie("Va rugam sa introduceti una dintre optiunile: a, b sau c");
                 }
                 break;
