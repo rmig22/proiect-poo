@@ -21,5 +21,5 @@ class Match{
     Match() = default;
     Match(const jucatorNPC& NPC, Jucator *jucator, const std::string &tip_jucator);
     ~Match() = default;
-    std::string getStatus();
+  const std::string& getStatus() const;
 };

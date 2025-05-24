@@ -70,6 +70,6 @@ Match::Match(const jucatorNPC &NPC, Jucator *player,const std::string& tip_jucat
   }
 }
 
-std::string Match::getStatus(){
+const std::string &Match::getStatus() const {
   return meci_status;
 }
