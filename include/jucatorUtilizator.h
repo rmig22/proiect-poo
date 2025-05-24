@@ -21,6 +21,7 @@ class jucatorUtilizator : public Jucator {
     void player_style(Jucator* jucator, int optiune) override;
     int getPunctaj() const;
     void setPunctaj(int punctaj);
+    void creare_chestionar();
 };
 
 

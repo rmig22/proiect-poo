@@ -13,13 +13,16 @@ jucatorUtilizator::jucatorUtilizator() {
   std::string nume1;
   std::cin>>nume1;
   setNume(nume1);
+  creare_chestionar();
+};
+void jucatorUtilizator::creare_chestionar(){
   std::cout<< "Hello, "<< nume << "!" << std::endl;
   Chestionar chestionarul;
   int p = chestionarul.getPunctaj();
   std::cout << "Punctaj: " << p << std::endl;
   this->actualizare(p);
   cout<<"categorie: "<<categorie<<std::endl;
-};
+}
 
 
 void jucatorUtilizator:: actualizare(int p){
