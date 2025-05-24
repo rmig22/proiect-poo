@@ -13,7 +13,7 @@ class Exceptie : public std::exception {
   public:
     Exceptie(std::string& mesaj);
 
-  explicit Exceptie(const std::string& str);
+  Exceptie(const std::string& str);
 
   ~Exceptie() override = default;
 

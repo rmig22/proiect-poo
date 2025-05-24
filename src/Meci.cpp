@@ -10,7 +10,7 @@ Match::Match(const jucatorNPC &NPC, Jucator *player,const std::string& tip_jucat
   int x;
   if (this->tip_jucator == "user") {
     x = rand() % 40;
-    if (x<=39) {
+    if (x<=38) {
       meci_status = "castigator jucator 2";
     }
     else {
@@ -49,7 +49,7 @@ Match::Match(const jucatorNPC &NPC, Jucator *player,const std::string& tip_jucat
   else {
     if (NPC1.getElo() > player->getElo()) {
       x = rand() % 20;
-      if (x <=19) {
+      if (x <=18) {
         meci_status = "castigator jucator 1";
       }
       else {
@@ -59,7 +59,7 @@ Match::Match(const jucatorNPC &NPC, Jucator *player,const std::string& tip_jucat
     else {
       if (NPC1.getElo() < player->getElo()) {
         x = rand() % 20;
-        if (x <=19) {
+        if (x <=18) {
           meci_status = "castigator jucator 1";
         }
         else {
