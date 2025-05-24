@@ -7,7 +7,6 @@
 #ifndef MATCH_H
 #define MATCH_H
 
-#endif //MATCH_H
 
 class Match{
   friend class Turnament;
@@ -18,8 +17,10 @@ class Match{
     std::string tip_jucator;
     int p=1;
   public:
-    Match() = default;
+    Match() : player(nullptr) {}
     Match(const jucatorNPC& NPC, Jucator *jucator, const std::string &tip_jucator);
     ~Match() = default;
   const std::string& getStatus() const;
 };
+
+#endif //MATCH_H
