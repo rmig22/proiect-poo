@@ -23,8 +23,6 @@ Turnament::Turnament() {
     for (int i=0; i<=14; i++) {
         jucatori_participanti.push_back(multime_jucatori[i]);
     }
-    jucatorUtilizator X;
-    start_turnament(X);
 }
 void Turnament::start_turnament(jucatorUtilizator &X) {
     system("cls");

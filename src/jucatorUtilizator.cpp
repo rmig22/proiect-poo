@@ -13,7 +13,6 @@ jucatorUtilizator::jucatorUtilizator() {
   std::string nume1;
   std::cin>>nume1;
   setNume(nume1);
-  creare_chestionar();
 };
 void jucatorUtilizator::creare_chestionar(){
   std::cout<< "Hello, "<< nume << "!" << std::endl;

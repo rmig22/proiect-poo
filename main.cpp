@@ -11,6 +11,9 @@ int main() {
     // jucatorul.actualizare();
     // jucatorul.afisareJucator();
     Turnament Turneu;
+    jucatorUtilizator X;
+    X.creare_chestionar();
+    Turneu.start_turnament(X);
 
     return 0;
 }
