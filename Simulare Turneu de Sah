@@ -1,0 +1,8 @@
+Programul simuleaza un turneu de sah.
+Stabilirea categoriei/elo-ului User-ului se face printr-un set de 5 intrebari (clasele Chestionar + Intrebari)
+Intrebarile sunt alese aleatoriu, pentru a simula pana la capat Turneul toate optiunile de raspuns sunt setate pe litera "C"
+Incepe turneul si simularea meciurilor (clasele Turneu + Match)
+Cu cat utilizatorul raspunde mai bine la intrebarile de la inceput, cu atat va avea mai multe sanse sa castige turneul
+la final, daca utilizatorul a castigat finala, va juca un meci cu castigatorul turneului din anul precedent(clasele jucator, jucatorUtilizator, jucatorNPC, jucatorBoss)
+Ultimul meci va fi interactiv, pe baza a 3 runde de "decidere" a stilului de joc curent (impotriva castigatorului din anul precedent)
+Daca utilizatorul castiga si acest meci, el castiga si premiul cel mare.
