@@ -4,6 +4,7 @@
 #pragma once
 
 #include <vector>
+#include <deque>
 #include "intrebare.h"
 #ifndef CHESTIONAR_H
 #define CHESTIONAR_H
@@ -15,7 +16,7 @@ class Chestionar {
  protected:
    int punctaj = 0;
     std::vector <Intrebare> intrebarile_totale = {};
-    std::vector <Intrebare> set_intrebari = {};
+    std::deque <Intrebare> set_intrebari = {};
 
  public:
     Chestionar();

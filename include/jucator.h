@@ -18,8 +18,8 @@ protected:
 public:
 
     Jucator();
-    Jucator(const Jucator& other);
-    Jucator& operator=(const Jucator& other);
+    Jucator(const Jucator& alt);
+    Jucator& operator=(const Jucator& alt);
     const std::string& getNume() const;
     int getElo() const;
     std::string& getCategorie();

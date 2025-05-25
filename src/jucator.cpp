@@ -35,14 +35,14 @@ void Jucator::setStyle(const std::string &Style) {
 }
 Jucator::Jucator() = default;
 
-Jucator::Jucator(const Jucator& other) : nume(other.nume), elo(other.elo), categorie(other.categorie), style(other.style) {}
+Jucator::Jucator(const Jucator& alt) : nume(alt.nume), elo(alt.elo), categorie(alt.categorie), style(alt.style) {}
 
-Jucator& Jucator::operator=(const Jucator& other) {
-  if (this != &other) {
-    nume = other.nume;
-    elo = other.elo;
-    categorie = other.categorie;
-    style = other.style;
+Jucator& Jucator::operator=(const Jucator& alt) {
+  if (this != &alt) {
+    nume = alt.nume;
+    elo = alt.elo;
+    categorie = alt.categorie;
+    style = alt.style;
   }
   return *this;
 }
