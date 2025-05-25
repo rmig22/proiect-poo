@@ -22,7 +22,7 @@ class Turnament{
     void simulate();
     void continuare_sferturi(std::vector<jucatorNPC> &sferturi, jucatorUtilizator &X);
     void continuare_semi_finale(std::vector<jucatorNPC> &semi_finale, jucatorUtilizator &X);
-    static void continuare_finala(jucatorNPC &finala, jucatorUtilizator &X);
+    void continuare_finala(jucatorNPC &finala, jucatorUtilizator &X);
     void start_turnament(jucatorUtilizator &X);
 };
 

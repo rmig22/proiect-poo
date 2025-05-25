@@ -6,7 +6,7 @@
 jucatorBoss::jucatorBoss() = default;
 
 void jucatorBoss::player_style(Jucator* jucator, int) {
-    if (jucator->getStyle() == "aggresiv"){
+    if (jucator->getStyle() == "agresiv"){
       std::cout<<"Joci agresiv! Daca nu esti calm, faci greseli..."<<std::endl;
       this->setStyle("chill");
     }
@@ -18,5 +18,4 @@ void jucatorBoss::player_style(Jucator* jucator, int) {
       std::cout<<"Te gandesti cam mult, o sa fac ritmul mai rapid..."<<std::endl;
       this->setStyle("agresiv");
     }
-    p++;
 }

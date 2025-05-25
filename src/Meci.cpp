@@ -11,11 +11,36 @@ Match::Match(jucatorNPC &NPC, Jucator *player,const std::string& tip_jucator)  :
   int x;
   if (this->tip_jucator == "user") {
     x = rand() % 40;
-    if (x<=38) {
-      meci_status = "castigator jucator 2";
+    if (player->getElo()>NPC.getElo()) {
+      if (x<=38) {
+        meci_status = "castigator jucator 2";
+      }
+      else {
+        meci_status = "castigator jucator 1";
+      }
     }
     else {
-      meci_status = "castigator jucator 1";
+        if (player->getElo() - NPC1.getElo()<=200) {
+        x = rand() % 18;
+        if (x<2) {
+          meci_status = "castigator jucator 1";
+        }
+        else {
+          meci_status = "castigator jucator 2";
+        }
+      }
+      else if (player->getElo() - NPC1.getElo() < 800){
+        x = rand() % 26;
+        if (x<2) {
+          meci_status = "castigator jucator 1";
+        }
+        else {
+          meci_status = "castigator jucator 2";
+        }
+      }
+      else {
+        meci_status = "castigator jucator 2";
+      }
     }
   }
   else if (abs(NPC1.getElo() -  player->getElo()) <=200) {

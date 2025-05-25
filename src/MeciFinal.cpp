@@ -12,34 +12,40 @@ MeciFinal::MeciFinal(jucatorUtilizator& user, jucatorBoss& veteran) : user(user)
     meci_style();
 }
 void MeciFinal:: meci_style() const {
+    veteran.setStyle("agresiv");
     std::cout<<"Mauritio a ales sa joace: "<<veteran.getStyle()<<std::endl;
   //std::cout<<"Alege stilul de joc: "<<std::endl<<"1. Agresiv"<<std::endl<<"2. Chill"<<std::endl<<"3. Calculat"<<std::endl;
-    std::cout<<std::endl<<"Punctaj: "<<user.getPunctaj()<<std::endl;
     int optiune = choose_style("Alege stilul de joc:\n1. Agresiv\n2. Chill\n3. Calculat\n");
 
-  user.player_style(&veteran, optiune);
-  veteran.player_style(&user, optiune);
+    user.player_style(&veteran, optiune);
+    veteran.player_style(&user, optiune);
     std::cout<<std::endl<<"Punctaj: "<<user.getPunctaj()<<std::endl;
 
     std::cout<<"Runda a doua! Mauritio joaca acum "<<veteran.getStyle()<<std::endl;
-    std::cout<<"Alege stilul de joc: "<<std::endl<<"1. Agresiv"<<std::endl<<"2. Chill"<<std::endl<<"3. Calculat"<<std::endl;
 
     optiune = choose_style("Alege stilul de joc:\n1. Agresiv\n2. Chill\n3. Calculat\n");
     user.player_style(&veteran, optiune);
     veteran.player_style(&user, optiune);
     std::cout<<std::endl<<"Punctaj: "<<user.getPunctaj()<<std::endl;
 
-    std::cout<<"Runda a treia! Mauritio joaca acum"<< veteran.getStyle()<<std::endl;;
-    std::cout<<"Alege stilul de joc: "<<std::endl<<"1. Agresiv"<<std::endl<<"2. Chill"<<std::endl<<"3. Calculat"<<std::endl;
+    std::cout<<"Runda a treia! Mauritio joaca acum "<< veteran.getStyle()<<std::endl;
 
     optiune = choose_style("Alege stilul de joc:\n1. Agresiv\n2. Chill\n3. Calculat\n");
     user.player_style(&veteran, optiune);
     veteran.player_style(&user, optiune);
     std::cout<<std::endl<<"Punctaj: "<<user.getPunctaj()<<std::endl;
-
-    std::cin.ignore();
-
-    std::cin.ignore();
+    if (user.getPunctaj()==3) {
+        std::cin.ignore();
+        system("cls");
+        std::cout<<"Felicitari! Ai castigat un bilet la BeachPlease!";
+        std::cin.ignore();
+    }
+    else {
+        std::cin.ignore();
+        system("cls");
+        std::cout<<"Ne pare rau! Ati pierdut meciul.";
+        std::cin.ignore();
+    }
 }
 
 int MeciFinal::choose_style(const std::string& prompt) const {

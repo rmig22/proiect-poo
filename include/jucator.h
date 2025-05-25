@@ -22,7 +22,7 @@ public:
     Jucator& operator=(const Jucator& other);
     const std::string& getNume() const;
     int getElo() const;
-    //std::string& getCategorie();
+    std::string& getCategorie();
     //Chestionar getChestionar() const;
     void setNume(std::string nume);
     void setElo(int elo);

@@ -59,19 +59,19 @@ void jucatorUtilizator:: actualizare(int p){
 void jucatorUtilizator:: player_style(Jucator* veteran, int optiune){
     switch(optiune) {
       case 1://alege sa joace agresiv pentru:
-        if (veteran->getStyle()=="chill") {
+        if (veteran->getStyle()=="calculat") {
           this->setPunctaj(this->getPunctaj() + 1);
         }
       this->setStyle("agresiv");
       break;
       case 2://alege sa joace chill pentru:
-        if (veteran->getStyle()=="calculat") {
+        if (veteran->getStyle()=="agresiv") {
           this->setPunctaj(this->getPunctaj() + 1);
         }
       this->setStyle("chill");
       break;
       case 3://alege sa joace calculat pentru:
-        if (veteran->getStyle()=="agresiv") {
+        if (veteran->getStyle()=="chill") {
           this->setPunctaj(this->getPunctaj() + 1);
         }
       this->setStyle("calculat");

@@ -8,8 +8,6 @@
 
 #endif //JUCATORBOSS_H
 class jucatorBoss : public jucatorNPC {
-    protected:
-    int p=0;
   public:
     jucatorBoss();
     ~jucatorBoss() override = default;
