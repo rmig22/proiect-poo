@@ -12,7 +12,6 @@
 
 class Chestionar {
 
-    // friend class jucator;
  protected:
    int punctaj = 0;
     std::vector <Intrebare> intrebarile_totale = {};
