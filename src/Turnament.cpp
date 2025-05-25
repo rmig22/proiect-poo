@@ -26,7 +26,6 @@ Turnament::Turnament() {
     }
 }
 void Turnament::start_turnament(jucatorUtilizator &X) {
-    system("cls");
     std::cout<<"Incepe turneul!"<<std::endl<<"------------------------------------------------------"<<std::endl<<std::endl;
     std::cin.ignore();
     for (int i=0; i<14; i+=2) {

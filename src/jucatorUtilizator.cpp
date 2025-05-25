@@ -19,9 +19,10 @@ void jucatorUtilizator::creare_chestionar(){
   std::cout<< "Hello, "<< nume << "!" << std::endl;
   Chestionar chestionarul;
   int p = chestionarul.getPunctaj();
+  system("cls");
   std::cout << "Punctaj: " << p << std::endl;
   this->actualizare(p);
-  cout<<"categorie: "<<categorie<<std::endl;
+  cout<<"Categorie: "<<categorie<<std::endl;
 }
 
 
