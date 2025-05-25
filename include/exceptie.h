@@ -18,7 +18,7 @@ class Exceptie : public std::exception {
     ~Exceptie() override = default;
 
     const char* what() const noexcept override;
-    static void verifica(std::string rasp);
+    static void verifica(std::string &rasp);
     static void verifica_inp(const int optiune);
 };
 #endif //EXCEPTIE_H
