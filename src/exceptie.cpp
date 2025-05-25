@@ -10,7 +10,7 @@ Exceptie::Exceptie(const std::string& mesaj) : mesaj(mesaj){}
 const char* Exceptie::what() const noexcept{
   return mesaj.c_str();
 }
-void Exceptie::verifica( std::string &rasp) {
+void Exceptie::verifica(const std::string &rasp) {
   if (rasp != "a" && rasp != "b" && rasp != "c" && rasp != "d" && rasp != "A" && rasp != "B" && rasp != "C" && rasp != "D") {
     throw Exceptie("Va rugam sa introduceti una dintre optiunile: a, b, c sau d.");
   }
