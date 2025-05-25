@@ -35,9 +35,10 @@ void Turnament::start_turnament(jucatorUtilizator &X) {
             sferturi.push_back(jucatori_participanti[i]);
             updateElo(jucatori_participanti[i+1], 200);
         }
-        else
+        else {
             sferturi.push_back(jucatori_participanti[i+1]);
             updateElo(jucatori_participanti[i], 200);
+        }
     }
     std::cout<<std::endl<<"Urmatorul meci il aveti cu: "<<jucatori_participanti[14].getNume()<<std::endl;
     Match meci1(jucatori_participanti[14], &X, "user");
