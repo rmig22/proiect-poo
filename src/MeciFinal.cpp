@@ -2,6 +2,7 @@
 // Created by RImoc on 5/19/2025.
 //
 #include "MeciFinal.h"
+#include "exceptie.h"
 #include <iostream>
 #include <limits>
 
@@ -47,17 +48,7 @@ int MeciFinal::choose_style(const std::string& prompt) const {
         try {
             std::cout << prompt;
             std::cin >> optiune;
-
-            if (std::cin.fail()) {
-                nr_incercari--;
-                throw std::invalid_argument("Introdu un numar");
-            }
-
-            if (optiune < 1 || optiune>3) {
-                nr_incercari--;
-                throw std::out_of_range("Introdu un numar intr 1, 2 si 3");
-            }
-
+            Exceptie::verifica_inp(optiune, &nr_incercari);
             return optiune;
         } catch (const std::exception& e) {
             std::cerr << "Eroare: " << e.what() << "\n";

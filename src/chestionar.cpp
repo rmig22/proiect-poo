@@ -42,9 +42,7 @@ Chestionar::Chestionar() {
                 break;
             }
             try {
-                if (test_r != "a" && test_r != "b" && test_r != "c" && test_r != "d" && test_r != "A" && test_r != "B" && test_r != "C" && test_r != "D") {
-                    throw Exceptie("Va rugam sa introduceti una dintre optiunile: a, b sau c");
-                }
+                Exceptie::verifica(test_r);
                 break;
             }
             catch (const Exceptie& e) {
