@@ -10,11 +10,12 @@
 
 
 class jucatorUtilizator : public Jucator {
-    protected:
+private:
     int punctaj=0;
-
-  public:
     jucatorUtilizator();
+    jucatorUtilizator(const jucatorUtilizator&) = delete;
+    jucatorUtilizator& operator=(const jucatorUtilizator&) = delete;
+  public:
     void actualizare(int p);
     void afisareJucator() override;
     ~jucatorUtilizator() override = default;
@@ -22,6 +23,7 @@ class jucatorUtilizator : public Jucator {
     int getPunctaj() const;
     void setPunctaj(int punctaj);
     void creare_chestionar();
+    static jucatorUtilizator& getInstanta();
 };
 
 

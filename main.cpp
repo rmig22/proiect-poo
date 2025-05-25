@@ -1,7 +1,4 @@
-#include <iostream>
-#include <array>
 #include "include/Turnament.h"
-#include <fstream>
 
 int main() {
     //Jucator jucator1( 1500);
@@ -11,7 +8,7 @@ int main() {
     // jucatorul.actualizare();
     // jucatorul.afisareJucator();
     Turnament Turneu;
-    jucatorUtilizator X;
+    jucatorUtilizator& X = jucatorUtilizator::getInstanta();
     X.creare_chestionar();
     Turneu.start_turnament(X);
 

@@ -86,3 +86,8 @@ int jucatorUtilizator::getPunctaj() const {
 void jucatorUtilizator::setPunctaj(int punctaj1) {
     this->punctaj = punctaj1;
   }
+
+jucatorUtilizator& jucatorUtilizator::getInstanta() {
+    static jucatorUtilizator instanta;
+    return instanta;
+  }

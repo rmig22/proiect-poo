@@ -9,9 +9,9 @@ void Jucator::afisareJucator() {
   std::cout<< "jucator: "<< nume<<std::endl<< "elo: "<< elo<<std::endl;
 };
 
-// std::string Jucator::getNume() const {
-//   return nume;
-// }
+ std::string Jucator::getNume() const {
+   return nume;
+ }
 int Jucator::getElo() const {
   return elo;
 }

@@ -22,7 +22,7 @@ jucatorNPC::jucatorNPC(const jucatorNPC& other):Jucator(other) {
 
 jucatorNPC& jucatorNPC::operator=(const jucatorNPC& other) {
     if (this != &other) {
-        Jucator::operator=(other);  // Assign base part
+        Jucator::operator=(other);
         // Copy members of jucatorNPC if any
     }
     return *this;

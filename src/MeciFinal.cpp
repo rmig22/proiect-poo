@@ -53,7 +53,7 @@ int MeciFinal::choose_style(const std::string& prompt) const {
                 throw std::invalid_argument("Introdu un numar");
             }
 
-            if (optiune < 1 || optiune > 3) {
+            if (optiune < 1 || optiune>3) {
                 nr_incercari--;
                 throw std::out_of_range("Introdu un numar intr 1, 2 si 3");
             }
