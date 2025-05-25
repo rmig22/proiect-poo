@@ -3,10 +3,11 @@
 //
 
 #include "Meci.h"
+#include "updateElo.h"
 #include <random>
 
 
-Match::Match(const jucatorNPC &NPC, Jucator *player,const std::string& tip_jucator)  : NPC1 (NPC), player (player), tip_jucator(tip_jucator)  {
+Match::Match(jucatorNPC &NPC, Jucator *player,const std::string& tip_jucator)  : NPC1 (NPC), player (player), tip_jucator(tip_jucator)  {
   int x;
   if (this->tip_jucator == "user") {
     x = rand() % 40;
@@ -67,6 +68,12 @@ Match::Match(const jucatorNPC &NPC, Jucator *player,const std::string& tip_jucat
         }
       }
     }
+  }
+  if (meci_status == "castigator jucator 1") {
+    updateElo(player, 200);
+  }
+  else {
+    updateElo(NPC, 200);
   }
 }
 

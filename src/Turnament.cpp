@@ -101,7 +101,7 @@ void Turnament::continuare_semi_finale(std::vector<jucatorNPC> &semi_finale_loca
         continuare_finala(finala, X);
     }
 }
-void Turnament::continuare_finala(const jucatorNPC& finala,jucatorUtilizator& X) {
+void Turnament::continuare_finala(jucatorNPC &finala, jucatorUtilizator &X) {
     // std::cout<<finala.getCategorie()<<std::endl;
     std::cout<<std::endl<<"Urmatorul meci il aveti cu: "<<finala.getNume()<<std::endl;
     Match finala_ (finala, &X, "user");

@@ -18,7 +18,7 @@ class Match{
     int p=1;
   public:
     Match() : player(nullptr) {}
-    Match(const jucatorNPC& NPC, Jucator *jucator, const std::string &tip_jucator);
+    Match(jucatorNPC& NPC, Jucator *jucator, const std::string &tip_jucator);
     ~Match() = default;
   const std::string& getStatus() const;
 };
