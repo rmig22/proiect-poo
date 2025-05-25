@@ -118,11 +118,11 @@ void Turnament::continuare_semi_finale(std::vector<jucatorNPC> &semi_finale_loca
         simulate();
     }
 }
-void Turnament::continuare_finala(jucatorNPC &finala, jucatorUtilizator &X) {
+void Turnament::continuare_finala(jucatorNPC &finala_jucator, jucatorUtilizator &X) {
     // std::cout<<finala.getCategorie()<<std::endl;
-    std::cout<<std::endl<<"Urmatorul meci il aveti cu: "<<finala.getNume()<<std::endl<<"Elo: "<<finala.getElo()<<std::endl<<"Categorie: "<<finala.getCategorie()<<std::endl;;
-    Match finala_ (finala, &X, "user");
-    if (finala_.getStatus() == "castigator jucator 2") {
+    std::cout<<std::endl<<"Urmatorul meci il aveti cu: "<<finala_jucator.getNume()<<std::endl<<"Elo: "<<finala_jucator.getElo()<<std::endl<<"Categorie: "<<finala_jucator.getCategorie()<<std::endl;;
+    Match finala_1 (finala_jucator, &X, "user");
+    if (finala_1.getStatus() == "castigator jucator 2") {
         system("cls");
         std::cout<<"------------------------------------------------------\nFelicitari! Ati castigat turneul!"<<std::endl;
         jucatorBoss Veteranul;
