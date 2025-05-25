@@ -48,9 +48,10 @@ int MeciFinal::choose_style(const std::string& prompt) const {
         try {
             std::cout << prompt;
             std::cin >> optiune;
-            Exceptie::verifica_inp(optiune, &nr_incercari);
+            Exceptie::verifica_inp(optiune);
             return optiune;
         } catch (const std::exception& e) {
+            nr_incercari--;
             std::cerr << "Eroare: " << e.what() << "\n";
 
             std::cin.clear();

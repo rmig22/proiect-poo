@@ -15,14 +15,12 @@ void Exceptie::verifica(const std::string rasp) {
     throw Exceptie("Va rugam sa introduceti una dintre optiunile: a, b, c sau d.");
   }
 }
-void Exceptie::verifica_inp(const int optiune, int *nr_incercari) {
+void Exceptie::verifica_inp(const int optiune) {
   if (std::cin.fail()) {
-    nr_incercari--;
     throw std::invalid_argument("Introdu un numar");
   }
 
   if (optiune < 1 || optiune>3) {
-    nr_incercari--;
     throw std::out_of_range("Introdu un numar intr 1, 2 si 3");
   }
 }
