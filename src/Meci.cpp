@@ -69,12 +69,6 @@ Match::Match(jucatorNPC &NPC, Jucator *player,const std::string& tip_jucator)  :
       }
     }
   }
-  if (meci_status == "castigator jucator 1") {
-    updateElo(player, 200);
-  }
-  else {
-    updateElo(NPC, 200);
-  }
 }
 
 const std::string &Match::getStatus() const {

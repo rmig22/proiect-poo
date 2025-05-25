@@ -8,6 +8,7 @@
 #include <vector>
 #include <algorithm>
 #include <random>
+#include <updateElo.h>
 using namespace std;
 
 Turnament::Turnament() {
@@ -28,21 +29,22 @@ void Turnament::start_turnament(jucatorUtilizator &X) {
     system("cls");
     std::cout<<"Incepe turneul!"<<std::endl<<"------------------------------------------------------"<<std::endl<<std::endl;
     std::cin.ignore();
-    // Match Meci(jucatori_participanti[2], &X);
     for (int i=0; i<14; i+=2) {
         Match meci(jucatori_participanti[i], &jucatori_participanti[i+1], "npc");
-        //std::cout<< i<<" "<<meci.getStatus()<<" "<<jucatori_participanti[i].getNume()<<" "<<jucatori_participanti[i+1].getNume()<<std::endl;
         if (meci.getStatus() == "castigator jucator 1"){
             sferturi.push_back(jucatori_participanti[i]);
+            updateElo(jucatori_participanti[i+1], 200);
         }
         else
             sferturi.push_back(jucatori_participanti[i+1]);
+            updateElo(jucatori_participanti[i], 200);
     }
     std::cout<<std::endl<<"Urmatorul meci il aveti cu: "<<jucatori_participanti[14].getNume()<<std::endl;
     Match meci1(jucatori_participanti[14], &X, "user");
     meci1.tip_jucator = "user";
     // std::cout<< "14 "<< meci1.getStatus()<<" "<< jucatori_participanti[14].getNume()<<" "<<X.getNume()<<std::endl;
     if (meci1.getStatus() == "castigator jucator 1") {
+        updateElo(&X, 200);
         simulate();
     }
     else {
@@ -52,6 +54,7 @@ void Turnament::start_turnament(jucatorUtilizator &X) {
         std::cout<<"Felicitari! Ati ajuns in sferturi!"<<std::endl;
         std::cout<<"Apasati Enter ca sa continuati!";
         std::cin.ignore();
+        updateElo(jucatori_participanti[14], 200);
         continuare_sferturi(sferturi, X );
     }
 }
@@ -66,9 +69,11 @@ void Turnament::continuare_sferturi(std::vector<jucatorNPC> &sferturi_local, juc
         //cout<<sferturi[i].getNume()<< " "<< sferturi[i].getCategorie()<< " "<< sferturi[i+1].getNume()<<" "<< sferturi[i+1].getCategorie()<< " "<< sferturi1.getStatus()<<std::endl;
         if (sferturi1.getStatus() == "castigator jucator 1") {
             semi_finale.push_back(sferturi_local[i]);
+            updateElo(jucatori_participanti[i+1], 400);
         }
         else {
             semi_finale.push_back(sferturi_local[i+1]);
+            updateElo(jucatori_participanti[i], 400);
         }
     }
     std::cout<<std::endl<<"Urmatorul meci il aveti cu: "<<sferturi_local[6].getNume()<<std::endl;
@@ -87,13 +92,16 @@ void Turnament::continuare_semi_finale(std::vector<jucatorNPC> &semi_finale_loca
     Match semi_finale1(semi_finale_local[0], &semi_finale_local[1], "npc");
     if (semi_finale1.getStatus() == "castigator jucator 1") {
         this->finala =semi_finale_local[0];
+        updateElo(semi_finale_local[1], 600);
     }
     else {
         this->finala = semi_finale_local[1];
+        updateElo(semi_finale_local[0], 600);
     }
     std::cout<<std::endl<<"Urmatorul meci il aveti cu: "<<semi_finale_local[2].getNume()<<std::endl;
     Match semi_finale2(semi_finale_local[2], &X, "user");
     if (semi_finale2.getStatus() == "castigator jucator 2") {
+        updateElo(semi_finale_local[2], 800);
         std::cout<<std::endl;
         std::cout<<"------------------------------------------------------\nFelicitari! Ati ajuns in finala!"<<std::endl;
         std::cout<<"Apasati Enter pentru a continua!";

@@ -20,7 +20,7 @@ class Match{
     Match() : player(nullptr) {}
     Match(jucatorNPC& NPC, Jucator *jucator, const std::string &tip_jucator);
     ~Match() = default;
-  const std::string& getStatus() const;
+    const std::string& getStatus() const;
 };
 
 #endif //MATCH_H
