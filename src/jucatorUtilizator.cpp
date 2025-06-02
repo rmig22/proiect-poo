@@ -53,7 +53,6 @@ void jucatorUtilizator:: actualizare(int p){
 
 
   void jucatorUtilizator:: afisareJucator(){
-  Jucator::afisareJucator();
   std::cout<<"categorie: "<<categorie<<endl;
 }
 

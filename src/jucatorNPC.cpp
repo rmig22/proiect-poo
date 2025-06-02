@@ -30,4 +30,7 @@ jucatorNPC& jucatorNPC::operator=(const jucatorNPC& other) {
     }
     return *this;
 }
+void jucatorNPC::afisareJucator() {
+
+}
 

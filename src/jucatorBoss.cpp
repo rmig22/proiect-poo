@@ -19,3 +19,4 @@ void jucatorBoss::player_style(Jucator* jucator, int) {
       this->setStyle("agresiv");
     }
 }
+void jucatorBoss::afisareJucator() {};
