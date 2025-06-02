@@ -5,6 +5,7 @@
 #ifndef JUCATOR_H
 #define JUCATOR_H
 #include <string>
+#include <iostream>
 class Jucator{
 protected:
     std::string nume;

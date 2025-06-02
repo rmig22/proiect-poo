@@ -15,6 +15,10 @@ std::istream& operator>>(std::istream& fin, jucatorNPC& jucator_ov) {
     }
     return fin;
 }
+std::ostream& operator<<(std::ostream& fout, jucatorNPC& juc){
+    fout<<"Nume: "<<juc.getNume()<<" "<<"Elo:  "<< juc.getElo();
+    return fout;
+}
 
 void jucatorNPC::player_style(Jucator*, int) {};
 jucatorNPC::jucatorNPC(const  jucatorNPC& juc):Jucator(juc) {

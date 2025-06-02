@@ -9,9 +9,9 @@
 
 Match::Match(jucatorNPC &NPC, Jucator *player,const std::string& tip_jucator)  : NPC1 (NPC), player (player), tip_jucator(tip_jucator)  {
   int x;
-  if (this->tip_jucator == "user" || player->getCategorie()== "maestru") {
+  if (this->tip_jucator == "user") {
     x = rand() % 40;
-    if (player->getElo()>NPC.getElo()) {
+    if (player->getElo()>NPC.getElo() || player->getCategorie() == "maestru") {
       if (x<=38) {
         meci_status = "castigator jucator 2";
       }
