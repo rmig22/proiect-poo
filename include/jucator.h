@@ -31,7 +31,7 @@ public:
     std::string& getStyle();
     //void setChestionar(Chestionar chestionar);
     void setCategorie(const std::string& cat);
-    virtual void afisareJucator() = 0;
+    // virtual void afisareJucator();
     virtual ~Jucator() = default;
     //void static intdinfisier(std::string& fisier);
     virtual void player_style(Jucator* jucator, int optiune) = 0;

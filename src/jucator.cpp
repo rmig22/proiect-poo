@@ -5,9 +5,9 @@
 #include <iostream>
 #include <utility>
 
-void Jucator::afisareJucator() {
-  std::cout<< "jucator: "<< nume<<std::endl<< "elo: "<< elo<<std::endl;
-};
+// void Jucator::afisareJucator() {
+//   std::cout<< "jucator: "<< nume<<std::endl<< "elo: "<< elo<<std::endl;
+// };
 Jucator::Jucator(const std::string& nume, int elo) : nume(nume), elo(elo) {};
  const std::string& Jucator::getNume() const {
    return nume;
