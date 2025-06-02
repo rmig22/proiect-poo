@@ -15,7 +15,7 @@ private:
     jucatorUtilizator();
     jucatorUtilizator(const jucatorUtilizator&) = delete;
     jucatorUtilizator& operator=(const jucatorUtilizator&) = delete;
-  public:
+public:
     void actualizare(int p);
     void afisareJucator() override;
     ~jucatorUtilizator() override = default;

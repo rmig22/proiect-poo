@@ -9,7 +9,7 @@
 
 Match::Match(jucatorNPC &NPC, Jucator *player,const std::string& tip_jucator)  : NPC1 (NPC), player (player), tip_jucator(tip_jucator)  {
   int x;
-  if (this->tip_jucator == "user") {
+  if (this->tip_jucator == "user" || player->getCategorie()== "maestru") {
     x = rand() % 40;
     if (player->getElo()>NPC.getElo()) {
       if (x<=38) {

@@ -129,7 +129,7 @@ void Turnament::continuare_finala(jucatorNPC &finala_jucator, jucatorUtilizator 
         MeciFinal meci_final(X, Veteranul);
         //X.player_style(&Veteranul, int optiune);
     }
-    else {
+    else if (finala_1.getStatus() == "castigator jucator 1"){
         simulate();
     }
 }
