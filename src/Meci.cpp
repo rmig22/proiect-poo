@@ -20,7 +20,7 @@ Match::Match(jucatorNPC &NPC, Jucator *player,const std::string& tip_jucator)  :
       }
     }
     else {
-        if (player->getElo() - NPC1.getElo()<=200) {
+        if (*player-NPC<=200) {
         x = rand() % 18;
         if (x<2) {
           meci_status = "castigator jucator 1";
@@ -29,7 +29,7 @@ Match::Match(jucatorNPC &NPC, Jucator *player,const std::string& tip_jucator)  :
           meci_status = "castigator jucator 2";
         }
       }
-      else if (player->getElo() - NPC1.getElo() < 800){
+      else if (*player-NPC < 800){
         x = rand() % 26;
         if (x<2) {
           meci_status = "castigator jucator 1";
@@ -43,7 +43,7 @@ Match::Match(jucatorNPC &NPC, Jucator *player,const std::string& tip_jucator)  :
       }
     }
   }
-  else if (abs(NPC1.getElo() -  player->getElo()) <=200) {
+  else if (abs(NPC-*player) <=200) {
     x = rand() % 4;
     if (x<2) {
       meci_status = "castigator jucator 1";
@@ -52,7 +52,7 @@ Match::Match(jucatorNPC &NPC, Jucator *player,const std::string& tip_jucator)  :
       meci_status = "castigator jucator 2";
     }
   }
-  else if (abs(NPC1.getElo() -  player->getElo()) < 800){
+  else if (abs(NPC-*player) < 800){
     if (NPC1.getElo() > player->getElo()) {
       x = rand() % 10;
       if (x <=8) {

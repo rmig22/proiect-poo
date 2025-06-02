@@ -15,10 +15,7 @@ class Intrebare{
     std::vector <std::string> variante;
 
   public:
-    Intrebare(std::string  intr,
-              char raspuns,
-              const std::vector<std::string>& variante)
-        : intr(std::string (intr)),raspuns (raspuns), variante(variante) {};
+    Intrebare(std::string  intr, char raspuns, const std::vector<std::string>& variante) : intr(std::string (intr)),raspuns (raspuns), variante(variante) {};
 
     [[nodiscard]] const std::string& getIntr() const;
 

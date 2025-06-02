@@ -19,6 +19,7 @@ protected:
 public:
 
     Jucator();
+    Jucator(const std::string& nume, int elo);// : nume(nume), elo(elo){};
     Jucator(const Jucator& alt);
     Jucator& operator=(const Jucator& alt);
     const std::string& getNume() const;
@@ -35,6 +36,7 @@ public:
     //void static intdinfisier(std::string& fisier);
     virtual void player_style(Jucator* jucator, int optiune) = 0;
     void setStyle(const std::string &style);
+    int operator-(const Jucator& alt) const;
 };
 
 #endif //JUCATOR_H

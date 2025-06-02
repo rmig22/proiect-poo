@@ -10,6 +10,7 @@
 class jucatorNPC : public Jucator {
 public:
   jucatorNPC();
+  jucatorNPC(const std::string& nume, int elo);
   ~jucatorNPC() override = default;
 
   friend std::istream& operator>>(std::istream& fin, jucatorNPC& );
@@ -19,4 +20,5 @@ public:
   jucatorNPC(const jucatorNPC& juc);
 
   jucatorNPC& operator=(const jucatorNPC& other);
+
 };
