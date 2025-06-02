@@ -17,7 +17,7 @@ private:
     jucatorUtilizator& operator=(const jucatorUtilizator&) = delete;
   public:
     void actualizare(int p);
-    void afisareJucator();
+    // void afisareJucator();
     ~jucatorUtilizator() override = default;
     void player_style(Jucator* jucator, int optiune) override;
     int getPunctaj() const;

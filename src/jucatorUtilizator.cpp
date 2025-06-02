@@ -52,9 +52,9 @@ void jucatorUtilizator:: actualizare(int p){
     };
 
 
-  void jucatorUtilizator:: afisareJucator(){
-  std::cout<<"categorie: "<<categorie<<endl;
-}
+//   void jucatorUtilizator:: afisareJucator(){
+//   std::cout<<"categorie: "<<categorie<<endl;
+// }
 
 void jucatorUtilizator:: player_style(Jucator* veteran, int optiune){
     switch(optiune) {
