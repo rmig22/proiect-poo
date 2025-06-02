@@ -13,7 +13,7 @@ public:
   ~jucatorNPC() override = default;
 
   friend std::istream& operator>>(std::istream& fin, jucatorNPC& );
-  friend std::ostream& operator<<(std::ostream& fout, jucatorNPC& juc);
+  friend std::ostream& operator<<(std::ostream& fout, const jucatorNPC& juc);
   void player_style(Jucator*, int) override;
 
   jucatorNPC(const jucatorNPC& juc);

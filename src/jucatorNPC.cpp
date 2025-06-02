@@ -15,7 +15,7 @@ std::istream& operator>>(std::istream& fin, jucatorNPC& jucator_ov) {
     }
     return fin;
 }
-std::ostream& operator<<(std::ostream& fout, jucatorNPC& juc){
+std::ostream& operator<<(std::ostream& fout, const jucatorNPC& juc){
     fout<<"Nume: "<<juc.getNume()<<" "<<"Elo:  "<< juc.getElo();
     return fout;
 }
