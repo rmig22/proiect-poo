@@ -15,6 +15,7 @@ class Turnament{
     std::vector<jucatorNPC> jucatori_participanti = {};
     std::vector<jucatorNPC> sferturi = {};
     std::vector<jucatorNPC> semi_finale = {};
+    static std::string nume;
     jucatorNPC finala;
   public:
     Turnament();
@@ -24,6 +25,7 @@ class Turnament{
     void continuare_semi_finale(std::vector<jucatorNPC> &semi_finale, jucatorUtilizator &X);
     void continuare_finala(jucatorNPC &finala, jucatorUtilizator &X);
     void start_turnament(jucatorUtilizator &X);
+    static void tip_turneu();
 };
 
 
