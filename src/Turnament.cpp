@@ -30,7 +30,8 @@ void Turnament::start_turnament(jucatorUtilizator &X) {//functia de start, prime
         std::sort(jucatori_participanti.begin(), jucatori_participanti.end(), [](const jucatorNPC& a, const jucatorNPC& b) {
         return a.getElo() > b.getElo();
     });
-    for (auto& i: jucatori_participanti) {
+    std::cout<<"Participantii:\n";
+    for (const auto& i: jucatori_participanti) {
         std::cout<<i<<std::endl;
     }
     std::cin.ignore();
